@@ -1,0 +1,40 @@
+/*HelveticaNeueRegular */
+
+@font-face {
+    font-family: "HelveticaNeueRegular";
+    src: url("../fonts/HelveticaNeue-Regular/HelveticaNeue.eot");
+    src: url("../fonts/HelveticaNeue-Regular/HelveticaNeue.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/HelveticaNeue-Regular/HelveticaNeue.woff") format("woff"),
+    url("../fonts/HelveticaNeue-Regular/HelveticaNeue.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/*FuturaHeavy */
+
+@font-face {
+    font-family: "FuturaHeavy";
+    src: url("../fonts/futura-pt-heavy.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+/*FuturaDemi */
+
+@font-face {
+    font-family: "FuturaDemi";
+    src: url("../fonts/FuturaPTDemi.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+/*TimesItalic */
+
+@font-face {
+    font-family: "TimesItalic";
+    src: url("../fonts/Times Italic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
