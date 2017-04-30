@@ -4,7 +4,7 @@
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+footer, header, menu, nav, section {
     display: block;
 }
 body {
@@ -38,7 +38,7 @@ table {
 
 .clearfix:before, .clearfix:after{content:"";display:table;}
 .clearfix:after{clear:both;}
-.clrearfix{zoom:1;}
+.clearfix{zoom:1;}
 
 
 /* ==================== COMMON ================  */
@@ -136,6 +136,12 @@ img {
 /* =========CUSTOM STYLES ============*/
 a:focus, a:link, a:visited {
     text-decoration: none;
+    color: #000;
+}
+
+.section {
+    padding-top: 3%;
+    padding-bottom: 2%;
 }
 
 .customBanner {
@@ -146,6 +152,37 @@ a:focus, a:link, a:visited {
 .customBannerDesc {
     color: #757575;
     font: 16px/26px 'TimesItalic';
+}
+
+.customH2 {
+    color: #000;
+    font: 60px/65px 'FuturaDemi';
+    text-align: center;
+}
+
+.customGoose {
+    font: 14px/24px 'HelveticaNeueBold';
+    margin-top: 20px;
+}
+
+.customPrice {
+    font: 14px/24px 'HelveticaNeueRegular';
+}
+
+.customButton {
+    padding: 15px 100px;
+    border: 1px solid #e5e5e5;
+    color: #000;
+    font: 26px/65px 'FuturaDemi';
+}
+
+.customMiniHead {
+    font: 18px/65px 'FuturaDemi';
+}
+
+.customItalic {
+    font: 16px/30px 'TimesItalic';
+    color: #757575;
 }
 
 input, select, textarea {
@@ -250,6 +287,7 @@ input, select, textarea {
     width: 100%;
 }
 /* ==================== END SLIDER SECTION =============*/
+
 /* ==================== BANNER SECTION =============*/
 .banners {
     border-top: 1px solid #e5e5e5;
@@ -297,6 +335,100 @@ input, select, textarea {
     text-align: center;
 }
 
-
 /* ==================== END BANNER SECTION =============*/
+
+/* ==================== SECTION NEW ARRIVALS =============*/
+.rowArrivals {
+    margin-top: 6%;
+}
+.arrivalItem {
+    cursor: pointer;
+    text-align: center;
+    color: #000;
+}
+.arrivalButton {
+    text-align: center;
+    margin-top: 50px;
+}
+/* ================= END SECTION NEW ARRIVALS  =============*/
+
+/* ================= FOOTER  =============*/
+.footer {
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.leftFooter {
+    border-right: 1px solid #e5e5e5;
+}
+.footerList li a {
+    font: 14px/40px 'HelveticaNeueRegular';
+}
+
+.footerCustom span {
+    font-family: 'HelveticaNeueBold';
+}
+
+.footerCustom {
+    font: 14px/24px 'HelveticaNeueRegular';
+}
+
+.footerQuestions .footerCustom:before {
+    content: url("../img/social/tw.png");
+    margin-right: 15px;
+}
+.customItalic {
+    width: 65%;
+    margin-top: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.rowSocial {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 40px;
+}
+
+.tw {
+    margin-left: 30px;
+}
+/* ================= END FOOTER  =============*/
+/* ================= BOTTOM BAR  =============*/
+.bottomBarP {
+    font: 12px/65px 'HelveticaNeueBold';
+}
+
+.bottomBarList {
+    text-align: right;
+}
+.bottomBarList li {
+    display: inline;
+    margin-left: 30px;
+}
+
+.bottomBarList a {
+    font: 12px/65px 'HelveticaNeueBold';
+}
+
+.share {
+    font: 12px/65px 'HelveticaNeueRegular';
+    background: #f4f4f4;
+    padding: 5px;
+    margin-left: 10px;
+    position: relative;
+}
+
+.share:before {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    right: 100%;
+    top: 10px;
+    border-top: 3px solid transparent;
+    border-right: 4px solid #f4f4f4;
+    border-bottom: 3px solid transparent;
+}
+/* ================= END BOTTOM BAR =============*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/

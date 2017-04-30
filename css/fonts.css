@@ -10,6 +10,18 @@
     font-weight: normal;
 }
 
+/*HelveticaNeueBold */
+
+@font-face {
+    font-family: "HelveticaNeueBold";
+    src: url("../fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.eot");
+    src: url("../fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.woff") format("woff"),
+    url("../fonts/HelveticaNeue-Bold/HelveticaNeue-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
 /*FuturaHeavy */
 
 @font-face {
