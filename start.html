@@ -11,12 +11,14 @@
 <body>
     <header class="header">
         <div class="container padding clearfix">
-            <div class="col col-1-2 logoBlock padding-left">
-                <a href="start.html" class="logo">Template</a>
-            </div>
-            <div class="col col-1-2 logInBlock padding-right">
-                <a href="#" class="singUp">E-mail sing up</a>
-                <a href="#" class="bag">Bag</a>
+            <div class="rowTopBar clearfix">
+                <div class="col col-1-2 logoBlock padding-left">
+                    <a href="start.html" class="logo">Template</a>
+                </div>
+                <div class="col col-1-2 logInBlock padding-right">
+                    <a href="#" class="singUp">E-mail sing up</a>
+                    <a href="#" class="bag">Bag</a>
+                </div>
             </div>
             <nav class="nav clearfix">
                 <ul class="col menu padding-left">
@@ -29,63 +31,69 @@
                     <li><a href="#">Clearance</a></li>
                     <li><a href="#">Store Locator</a></li>
                 </ul>
-                <div class="col padding-right search">
+                <div class="col padding search">
                     <form action="" class="searchForm">
                         <input type="search" name="search" placeholder="Style Name">
-                        <button type="submit"><a href=""><img src="img/header/search.png" alt="search"></a></button>
+                        <button type="button"><img src="img/header/search.png" alt="search"></button>
                     </form>
                 </div>
             </nav>
         </div>
     </header>
     <section class="slider">
-        <img src="img/slider/slider1.png" alt="slider" class="slider">
+        <img src="img/slider/slider1.png" alt="slider" class="slider sliderDesktop">
+        <img src="img/slider/slider2.jpg" alt="slider" class="slider sliderTablet">
     </section>
     <section class="banners">
-        <div class="container clearfix">
-            <a href="">
-                <div class="col col-1-2 leftBanner bannerBlock">
-                    <img src="img/banners/banner1.png" alt="NikeRed">
-                    <div class="overlay">
-                        <p class="customBanner">Nike Red</p>
-                        <p class="customBannerDesc">New</p>
-                    </div>
+        <a href="" class="">
+            <div class="col col-1-2 leftBanner bannerBlock">
+                <img src="img/banners/banner1.png" alt="NikeRed">
+                <div class="overlay">
+                    <p class="customBanner">Nike Red</p>
+                    <p class="customBannerDesc">New</p>
                 </div>
-            </a>
-            <a href="">
-                <div class="col col-1-2 rightBanner bannerBlock">
-                    <img src="img/banners/banner2.png" alt="CapsHats">
-                    <div class="overlay">
-                        <p class="customBanner">Caps & Hats</p>
-                        <p class="customBannerDesc">Sale -50%</p>
-                    </div>
+            </div>
+        </a>
+        <a href="" class="">
+            <div class="col col-1-2 rightBanner bannerBlock">
+                <img src="img/banners/banner2.png" alt="CapsHats">
+                <div class="overlay">
+                    <p class="customBanner">Caps & Hats</p>
+                    <p class="customBannerDesc">Sale -50%</p>
                 </div>
-            </a>
-        </div>
+            </div>
+            <div class="col rightBannerSmall bannerBlock">
+                <img src="img/banners/banner3.png" alt="Sale">
+                <div class="overlay">
+                    <p class="customBanner">Sale</p>
+                    <p class="customBannerDesc">-70%</p>
+                </div>
+            </div>
+
+        </a>
     </section>
 
     <section class="section arrivals">
-        <div class="container">
+        <div class="container padding">
             <div class="customH2">New arrivals</div>
             <div class="rowArrivals clearfix">
-                <div class="col col-1-4 arrivalItem" data-arrival="1">
+                <div class="col arrivalItem" data-arrival="1">
                     <img src="img/arrivals/arrival1.jpg" alt="arrival">
                     <p class="customGoose">Straight Leg Jeans</p>
                     <p class="customPrice">£55.00</p>
                 </div>
-                <div class="col col-1-4 arrivalItem">
+                <div class="col arrivalItem" data-arrival="2">
                     <img src="img/arrivals/arrival2.jpg" alt="arrival">
                     <p class="customGoose">Boyfriend T-Shirt with
                         Bohemian Print</p>
                     <p class="customPrice">£34.25</p>
                 </div>
-                <div class="col col-1-4 arrivalItem">
+                <div class="col arrivalItem" data-arrival="3">
                     <img src="img/arrivals/arrival3.jpg" alt="arrival">
-                    <p class="customGoose">Boyfriend T-Shirt with
-                        Bohemian Print</p>
+                    <p class="customGoose">Only Busted Knee Jean</p>
                     <p class="customPrice">£140.50</p>
                 </div>
-                <div class="col col-1-4 arrivalItem">
+                <div class="col arrivalItem" data-arrival="4">
                     <img src="img/arrivals/arrival4.jpg" alt="arrival">
                     <p class="customGoose">Only Skinny Jeans</p>
                     <p class="customPrice">£34.25</p>
@@ -97,9 +105,9 @@
         </div>
     </section>
     <footer class="footer">
-        <div class="container clearfix">
-            <div class="col col-1-2 leftFooter clearfix">
-                <div class="col col-1-2">
+        <div class="container clearfix padding">
+            <div class="col col-1-2 leftFooter clearfix padding">
+                <div class="col footerLinks padding">
                     <p class="customMiniHead">
                         Quick Links
                     </p>
@@ -111,7 +119,7 @@
                         <li><a href="#">Support</a></li>
                     </ul>
                 </div>
-                <div class="col col-1-2">
+                <div class="col footerCare padding">
                     <p class="customMiniHead">
                         Customer Care
                     </p>
@@ -125,15 +133,15 @@
                     </ul>
                 </div>
             </div>
-            <div class="col col-1-2 rightFooter clearfix">
-                <div class="row clearfix">
-                    <div class="col col-1-2 footerQuestions">
+            <div class="col col-1-2 rightFooter clearfix padding">
+                <div class="rowRightFooter clearfix">
+                    <div class="col footerQuestions padding">
                         <p class="customMiniHead">
                             Questions
                         </p>
                         <a href="#" class="footerCustom">Tweet us <span>@template</span></a>
                     </div>
-                    <div class=" col col-1-2">
+                    <div class=" col  footerPhone padding">
                         <p class="customMiniHead">
                             Order by phone
                         </p>
@@ -142,6 +150,13 @@
                 </div>
                 <p class="customItalic">We have our own delivery service which operates in 23 major European cities. Delivery time - 3-5 days.</p>
                 <div class="rowSocial">
+                    <div class="col col-1-3 padding legalBlock">
+                        <ul class="bottomBarList clearfix">
+                            <li><a href="#">Legal notice</a></li>
+                            <li><a href="#">Privacy policy</a></li>
+                            <li><a href="#">Site map</a></li>
+                        </ul>
+                    </div>
                     <a href="" class="fb"><img src="img/social/fb.png" alt="fb"></a>
                     <a href="" class="tw"><img src="img/social/tw_color.png" alt="twitter"></a>
                 </div>
@@ -149,16 +164,16 @@
         </div>
     </footer>
     <div class="bottomBar">
-        <div class="container clearfix">
-            <div class="col col-1-3">
+        <div class="container padding clearfix">
+            <div class="col col-1-3 padding yearBlock">
                 <p class="bottomBarP">
                     © 2010–<span class="year">2015</span>, The Template Group inc.
                 </p>
             </div>
-            <div class="col col-1-3 text-center">
+            <div class="col col-1-3  text-center shareBlock">
                 <a href="#" class="customMiniHead">Share<span class="share">1 436</span></a>
             </div>
-            <div class="col col-1-3">
+            <div class="col col-1-3 padding legalBlock">
                 <ul class="bottomBarList clearfix">
                     <li><a href="#">Legal notice</a></li>
                     <li><a href="#">Privacy policy</a></li>

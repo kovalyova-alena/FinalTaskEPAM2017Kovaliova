@@ -120,15 +120,15 @@ img {
     }
 }
 
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 1025px) and (max-width: 1199px) {
     .container {
-        width: 970px;
+        width: 1010px;
     }
 }
 
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 480px) and (max-width: 1024px) {
     .container {
-        width: 750px;
+        width: 92vw;
     }
 }
 
@@ -140,13 +140,14 @@ a:focus, a:link, a:visited {
 }
 
 .section {
-    padding-top: 3%;
+    padding-top: 9.5%;
     padding-bottom: 2%;
 }
 
 .customBanner {
     color: #000;
-    font: 30px/65px 'FuturaDemi';
+    font: 30px/44px 'FuturaDemi';
+    margin-bottom: 0;
 }
 
 .customBannerDesc {
@@ -162,18 +163,26 @@ a:focus, a:link, a:visited {
 
 .customGoose {
     font: 14px/24px 'HelveticaNeueBold';
-    margin-top: 20px;
+    margin: 43px auto 10px;
+    text-align: center;
+    width: 70%;
 }
 
 .customPrice {
     font: 14px/24px 'HelveticaNeueRegular';
+    text-align: center;
 }
 
 .customButton {
-    padding: 15px 100px;
+    padding: 20px 105px;
     border: 1px solid #e5e5e5;
     color: #000;
     font: 26px/65px 'FuturaDemi';
+    transition: background 0.5s;
+}
+
+.customButton:hover {
+    background: #f5f5f5;
 }
 
 .customMiniHead {
@@ -200,14 +209,23 @@ input, select, textarea {
     color: #000;
 }
 
+.rowTopBar {
+    clear: both;
+}
+
 .logo {
     font: 30px/65px 'FuturaHeavy', sans-serif;
     color: inherit;
     text-decoration: none;
 }
 
+.logoBlock {
+    margin-top: 10px;
+}
+
 .logInBlock {
     text-align: right;
+    margin-top: 7px;
 }
 
 .singUp, .bag {
@@ -221,21 +239,22 @@ input, select, textarea {
 }
 
 .bag {
-    margin-left: 40px;
+    margin-left: 50px;
 }
 /* ==================== NAV =============*/
 .menu {
     width: 90%;
+    margin-bottom: 20px;
 }
 
 .menu li{
     float: left;
     display: inline;
-    margin-right: 65px;
+    margin-right: 64px;
 }
 
 .menu li a {
-    font: 14px/65px 'FuturaDemi', sans-serif;
+    font: 14px/26px 'FuturaDemi', sans-serif;
     color: inherit;
 }
 
@@ -251,7 +270,7 @@ input, select, textarea {
     background: #e5e5e5;
     height: 2px;
     position: absolute;
-    bottom: 15px;
+    bottom: -5px;
     left: 0;
     width: 100%;
 }
@@ -261,7 +280,7 @@ input, select, textarea {
     border: none;
     box-shadow: none;
     color: #a8a8a8;
-    font: 12px/65px 'FuturaDemi';
+    font: 12px/26px 'FuturaDemi';
 }
 
 .search input:focus {
@@ -271,10 +290,9 @@ input, select, textarea {
 .search button {
     position: absolute;
     right: 0;
-    top: 3px;
+    top: 7px;
     background: none;
     border: none;
-    line-height: 62px;
 }
 
 /* ==================== END NAV =============*/
@@ -286,12 +304,18 @@ input, select, textarea {
     height: auto;
     width: 100%;
 }
+
+.sliderTablet {
+    display: none;
+}
 /* ==================== END SLIDER SECTION =============*/
 
 /* ==================== BANNER SECTION =============*/
 .banners {
     border-top: 1px solid #e5e5e5;
     position: relative;
+    display: inline-block;
+    width: 100%;
 }
 
 .banners:before, .banners:after {
@@ -324,14 +348,23 @@ input, select, textarea {
 
 .bannerBlock img {
     margin-top: -13%;
+    margin-left: 1%;
     transform: scale(1);
     transition: transform 1s;
 }
 
+.leftBanner img {
+    margin-top: -18%;
+}
+
+.rightBannerSmall {
+    display: none;
+}
+
 .overlay {
     position: absolute;
-    top: 65px;
-    right: 80px;
+    top: 55px;
+    right: 10%;
     text-align: center;
 }
 
@@ -339,27 +372,65 @@ input, select, textarea {
 
 /* ==================== SECTION NEW ARRIVALS =============*/
 .rowArrivals {
-    margin-top: 6%;
+    margin-top: 7.5%;
 }
 .arrivalItem {
     cursor: pointer;
-    text-align: center;
     color: #000;
+}
+
+.arrivalItem:first-child {
+    padding-left: 0;
+    width: 22%;
+    text-align: left;
+}
+
+.arrivalItem:last-child {
+    padding-right: 0;
+    width: 22%;
+    text-align: right;
+}
+
+.arrivalItem:nth-child(2),
+.arrivalItem:nth-child(3) {
+    width: 28%;
+    text-align: center;
 }
 .arrivalButton {
     text-align: center;
-    margin-top: 50px;
+    margin-top: 7%;
 }
 /* ================= END SECTION NEW ARRIVALS  =============*/
 
 /* ================= FOOTER  =============*/
+
 .footer {
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
+    margin-top: 5%;
 }
 
 .leftFooter {
     border-right: 1px solid #e5e5e5;
+    padding-top: 2.5%;
+    padding-bottom: 7.5%;
+}
+
+.rightFooter {
+    padding-top: 2.5%;
+    padding-left: 45px;
+}
+
+.rowRightFooter {
+    clear: both;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.rowRightFooter .customMiniHead {
+    line-height: 42px;
+    margin-bottom: 0;
+    margin-top: 10px;
 }
 .footerList li a {
     font: 14px/40px 'HelveticaNeueRegular';
@@ -373,13 +444,23 @@ input, select, textarea {
     font: 14px/24px 'HelveticaNeueRegular';
 }
 
+.footerQuestions,
+.footerLinks {
+    width: 45%;
+}
+
+.footerPhone,
+.footerCare{
+    width: 55%;
+}
+
 .footerQuestions .footerCustom:before {
     content: url("../img/social/tw.png");
-    margin-right: 15px;
+    margin-right: 10px;
 }
 .customItalic {
     width: 65%;
-    margin-top: 50px;
+    margin-top: 70px;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -389,12 +470,19 @@ input, select, textarea {
     padding-right: 15px;
     margin-top: 40px;
 }
+.rowSocial .legalBlock {
+    display: none;
+}
 
 .tw {
-    margin-left: 30px;
+    margin-left: 22px;
 }
 /* ================= END FOOTER  =============*/
 /* ================= BOTTOM BAR  =============*/
+
+.bottomBar {
+    padding-top: 8px;
+}
 .bottomBarP {
     font: 12px/65px 'HelveticaNeueBold';
 }
@@ -404,7 +492,7 @@ input, select, textarea {
 }
 .bottomBarList li {
     display: inline;
-    margin-left: 30px;
+    margin-left: 38px;
 }
 
 .bottomBarList a {
@@ -432,3 +520,196 @@ input, select, textarea {
 }
 /* ================= END BOTTOM BAR =============*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+@media (max-width: 1025px) and (max-width: 1199px) {
+    .menu li {
+        margin-right: 45px;
+    }
+}
+@media (max-width: 1024px) {
+    .arrivalItem:last-child {
+        display: none;
+    }
+
+    .arrivalItem:first-child,
+    .arrivalItem:nth-child(3) {
+        width: 31%;
+    }
+    .arrivalItem:nth-child(3) {
+        padding-right: 0;
+    }
+
+    .arrivalItem:nth-child(2) {
+        width: 38%;
+        padding-left: 5%;
+        padding-right: 4%;
+    }
+
+    .customGoose {
+        width: 100%;
+    }
+
+    .customItalic {
+        display: none;
+    }
+    .leftFooter {
+        width: 66%;
+        border-right: 0;
+    }
+
+    .rightFooter {
+        width: 34%;
+        padding-left: 0;
+    }
+
+    .customMiniHead {
+        font-size: 16px;
+    }
+
+    .customButton {
+        font-size: 24px;
+    }
+
+    .footerQuestions,
+    .footerPhone{
+        width: 100%;
+    }
+
+    .rowSocial {
+        margin-top: 30%;
+    }
+
+    .legalBlock, .yearBlock {
+        width: 40%;
+    }
+
+    .shareBlock {
+        width: 20%;
+    }
+
+    .bottomBarList li {
+        margin-left: 15px;
+    }
+
+    .menu {
+        width: 95%;
+    }
+
+    .search {
+        width: 5%;
+    }
+
+    .menu li {
+        margin-right: 20px;
+    }
+
+    .rightBanner,
+    .sliderDesktop{
+        display: none;
+    }
+
+    .rightBannerSmall {
+        display: block;
+        width: 33%;
+        text-align: center;
+    }
+
+    .leftBanner {
+        width: 66%;
+    }
+
+    .sliderTablet {
+        display: block;
+    }
+
+
+    .banners:after {
+        background: transparent;
+    }
+    .rightBannerSmall img {
+        margin-top: 26%;
+    }
+
+    .rightBannerSmall .overlay {
+        position: relative;
+        top:0;
+        right: 0;
+    }
+
+    .rightBannerSmall .customBanner {
+        color: #f14a58;
+        margin-top: 20px;
+    }
+
+    .customBanner {
+        font-size: 26px;
+    }
+
+    .leftBanner {
+        border-right: 1px solid #e5e5e5;
+    }
+
+    .banners {
+        border-bottom: 1px solid #e5e5e5;
+    }
+}
+
+@media (max-width: 768px) {
+    .bannerBlock {
+        height: 250px;
+    }
+
+    .rightBannerSmall img {
+        margin-top: 15%;
+    }
+
+    .leftBanner img {
+        margin-top: -23%;
+    }
+
+    .leftBanner .overlay {
+        top:10%;
+    }
+
+
+
+}
+@media (max-width: 700px) {
+    .yearBlock, .shareBlock,
+    .legalBlock{
+        width: 100%;
+        text-align: center;
+    }
+
+    .bottomBarList {
+        text-align: center;
+    }
+
+    .bottomBarP, .year, .share, .bottomBar .customMiniHead, .bottomBarList a {
+        line-height: 22px;
+    }
+
+    .legalBlock {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .yearBlock, .shareBlock {
+        width: 50%;
+    }
+
+    .shareBlock {
+        text-align: right;
+    }
+
+    .legalBlock {
+        display: none;
+    }
+
+    .rowSocial .legalBlock {
+        display: block;
+    }
+
+
+}
+
