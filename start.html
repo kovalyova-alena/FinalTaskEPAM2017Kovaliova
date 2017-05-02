@@ -14,15 +14,19 @@
             <div class="rowTopBar clearfix">
                 <div class="col col-1-2 logoBlock padding-left">
                     <a href="start.html" class="logo">Template</a>
+                    <a href="start.html" class="logoMobile">TL</a>
                 </div>
                 <div class="col col-1-2 logInBlock padding-right">
-                    <a href="#" class="singUp">E-mail sing up</a>
+                    <a href="#" class="singUp hideMobile">E-mail sing up</a>
                     <a href="#" class="bag">Bag</a>
                 </div>
+                <div class="col mobileMenu">
+                    <a href="" class="iconMenu"></a>
+                </div>
             </div>
-            <nav class="nav clearfix">
+            <nav class="nav hideMobile clearfix">
                 <ul class="col menu padding-left">
-                    <li><a href="#">Women</a></li>
+                    <li><a href="#" class="activeLink">Women</a></li>
                     <li><a href="#">Men</a></li>
                     <li><a href="#">Handbags</a></li>
                     <li><a href="#">Accessories</a></li>
@@ -34,8 +38,8 @@
                 <div class="col padding search">
                     <form action="" class="searchForm">
                         <input type="search" name="search" placeholder="Style Name">
-                        <button type="button"><img src="img/header/search.png" alt="search"></button>
                     </form>
+                    <button type="button" class="searchButton"><img src="img/header/search.png" alt="search"></button>
                 </div>
             </nav>
         </div>
@@ -181,7 +185,8 @@
                 </ul>
             </div>
         </div>
-
     </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>

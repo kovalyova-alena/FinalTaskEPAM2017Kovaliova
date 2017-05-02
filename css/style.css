@@ -126,7 +126,7 @@ img {
     }
 }
 
-@media (min-width: 480px) and (max-width: 1024px) {
+@media (max-width: 1024px) {
     .container {
         width: 92vw;
     }
@@ -202,6 +202,10 @@ input, select, textarea {
 
 :-ms-input-placeholder      {color:#a8a8a8;font: 12px/65px 'FuturaDemi';letter-spacing: 0.3px;}
 
+button:focus {
+    outline: none;
+}
+
 
 /* =========END CUSTOMS STYLES ==================*/
 /* ==================== HEADER =============*/
@@ -241,6 +245,11 @@ input, select, textarea {
 .bag {
     margin-left: 50px;
 }
+
+.logoMobile {
+    font: 30px/65px 'FuturaHeavy', sans-serif;
+    display: none;
+}
 /* ==================== NAV =============*/
 .menu {
     width: 90%;
@@ -260,6 +269,7 @@ input, select, textarea {
 
 .search {
     width: 10%;
+    position: relative;
 }
 .searchForm {
     position: relative;
@@ -295,6 +305,58 @@ input, select, textarea {
     border: none;
 }
 
+header .openSearch {
+    clear: both;
+    width: 100%;
+    margin-bottom: 20px;
+    display: block;
+}
+
+ header .display {
+    display: block;
+}
+
+.display {
+    display: block;
+}
+
+.openSearch .searchButton img {
+    display: none;
+}
+
+.openSearch .searchButton:after {
+    content: 'X';
+    color: #757575;
+}
+
+.openMenu .iconMenu {
+    background-position: bottom center;
+}
+
+.mobileMenu {
+    display: none;
+}
+
+.openMenu .mobileMenu {
+    border-left: 1px solid transparent;
+}
+
+.openMenu .rowTopBar:after {
+    content: '';
+    border-bottom: 1px solid #e5e5e5;
+    display: block;
+    width: 100vw;
+    margin-left: -4vw;
+}
+
+
+.iconMenu {
+    width: 14px;
+    height: 15px;
+    display: block;
+    margin-top: 26px;
+    background: url("../img/header/mobileMenu.png") top center;
+}
 /* ==================== END NAV =============*/
 
 /* ==================== END HEADER =============*/
@@ -520,9 +582,14 @@ input, select, textarea {
 }
 /* ================= END BOTTOM BAR =============*/
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-@media (max-width: 1025px) and (max-width: 1199px) {
+@media (min-width: 1025px) and (max-width: 1199px) {
     .menu li {
         margin-right: 45px;
+    }
+
+    .arrivalItem:nth-child(2) img,
+    .arrivalItem:nth-child(3) img {
+        max-width: 207px;
     }
 }
 @media (max-width: 1024px) {
@@ -540,12 +607,10 @@ input, select, textarea {
 
     .arrivalItem:nth-child(2) {
         width: 38%;
-        padding-left: 5%;
-        padding-right: 4%;
     }
 
     .customGoose {
-        width: 100%;
+        width: 90%;
     }
 
     .customItalic {
@@ -591,15 +656,20 @@ input, select, textarea {
     }
 
     .menu {
-        width: 95%;
+        width: 97%;
+        padding-right: 0;
     }
 
     .search {
-        width: 5%;
+        width: 3%;
     }
 
     .menu li {
         margin-right: 20px;
+    }
+
+    .menu li:last-child {
+        margin-right: 0;
     }
 
     .rightBanner,
@@ -651,6 +721,10 @@ input, select, textarea {
     .banners {
         border-bottom: 1px solid #e5e5e5;
     }
+
+    .searchForm {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
@@ -669,8 +743,6 @@ input, select, textarea {
     .leftBanner .overlay {
         top:10%;
     }
-
-
 
 }
 @media (max-width: 700px) {
@@ -691,6 +763,92 @@ input, select, textarea {
     .legalBlock {
         margin-top: 10px;
     }
+
+    .leftBanner img {
+        margin-top: -20%;
+    }
+
+    .logoMobile {
+        display: block;
+        font-size: 24px;
+        padding-left: 15px;
+    }
+
+    .logo {
+        display: none;
+    }
+
+    .logoBlock{
+        width: 25%;
+        margin-top: 0;
+    }
+
+    .logInBlock {
+        text-align: left;
+        width: 65%;
+        margin-top: 0;
+    }
+
+    .hideMobile {
+        display: none;
+    }
+
+    .bag:before {
+        content: '';
+    }
+
+    .bag {
+        margin-left: 0;
+    }
+
+    .mobileMenu {
+        display: block;
+        width: 10%;
+        text-align: left;
+        padding-right: 0;
+        padding-left: 4vw;
+        border-left: 1px solid #e5e5e5;
+        height: 66px;
+    }
+
+    .mobileMenu a {
+        line-height: 65px;
+    }
+
+    .menu li {
+        float: none;
+        display: block;
+
+    }
+
+    .menu li a {
+        font: 28px/60px 'FuturaDemi';
+    }
+
+    .menu {
+        width: 100%;
+        padding-left: 15px;
+    }
+
+    .search button {
+        position: absolute;
+    }
+
+    .search {
+        width: 50%;
+        padding-left: 15px;
+        margin-bottom: 30px;
+    }
+
+    .searchForm {
+        display: block;
+    }
+
+    .menu li a.activeLink {
+        color: #f14a58;
+    }
+
+
 }
 
 @media (max-width: 480px) {
@@ -710,6 +868,73 @@ input, select, textarea {
         display: block;
     }
 
+    .rightBannerSmall {
+        display: none;
+    }
+    .leftBanner {
+        width: 100%;
+        height: auto;
+    }
 
+    .customBanner {
+        font-size: 24px;
+    }
+
+    .customH2 {
+        font-size: 30px;
+    }
+
+    .customGoose, .customPrice,
+    .footerList li a,
+    .footerCustom{
+        font-size: 12px;
+    }
+
+    .customButton {
+        font-size: 20px;
+        padding: 20px 80px;
+    }
+    .customMiniHead {
+        font-size: 14px;
+    }
+    .footer .customMiniHead {
+        font-size: 16px;
+    }
+
+    .bottomBarP,
+    .bottomBarList a,
+    .share{
+        font-size: 10px;
+    }
+
+    .arrivalItem[data-arrival='3'] {
+        display: none;
+    }
+
+    .arrivalItem[data-arrival='2'],
+    .arrivalItem[data-arrival='1']
+    {
+        width: 50%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .arrivalItem[data-arrival='1'] {
+        padding-right: 15px;
+    }
+    .arrivalItem[data-arrival='2'] {
+        padding-left: 15px;
+    }
+
+    .leftBanner img {
+        margin-top: -16%;
+    }
+
+}
+
+@media (min-width: 481px) and (max-width: 600px) {
+    .leftBanner img {
+        margin-top: -8%;
+    }
 }
 
