@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Start Page</title>
+    <title>Catalog Page</title>
 </head>
 <body>
     <header class="header">
@@ -43,11 +43,99 @@
             </nav>
         </div>
     </header>
-    <section class="slider">
-        <img src="img/slider/slider1.png" alt="slider" class="slider sliderDesktop">
-        <img src="img/slider/slider2.jpg" alt="slider" class="slider sliderTablet">
-        <img src="img/slider/slider3.jpg" alt="slider" class="slider sliderMobile">
+
+    <section class="filter">
+        <div class="container">
+            <form action="" class="form formFilter">
+                <label for="Fashion">Fashion</label>
+                <select name="fashion" id="Fashion">
+                    <option value="Casual">Casual Style</option>
+                    <option value="NewLook">New Look</option>
+                    <option value="Sport">Sport</option>
+                    <option value="Vintage">Vintage</option>
+                    <option value="Classic" >Classic</option>
+                </select>
+            </form>
+        </div>
     </section>
+
+    <section class="section arrivals products">
+        <div class="container padding">
+            <div class="rowArrivals clearfix">
+                <div class="col arrivalItem" data-product="1">
+                    <img src="img/catalog/product1.jpg" alt="product">
+                    <p class="customGoose">Only Skinny Jeans</p>
+                    <p class="customPrice">£65.50</p>
+                    <div class="extraOff">
+                        <p class="customMiniHead">Last weekend <span class="extra">extra 50% </span>off on all reduced boots and shoulder bags</p>
+                        <p class="offerExtra">
+                            This offer is valid in-store and online. Prices displayed reflect this additional discount. This offer ends at <span class="offerDate">11:59 GMT on March 1st 2015</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col arrivalItem" data-product="2">
+                    <img src="img/catalog/product2.jpg" alt="product">
+                    <p class="customGoose">Neck Knitted Jumper</p>
+                    <p class="customPrice">£76.25</p>
+                </div>
+                <div class="col arrivalItem" data-product="3">
+                    <img src="img/catalog/product3.jpg" alt="product">
+                    <p class="customGoose">Turtle Neck Jumper in Rib</p>
+                    <p class="customPrice">£130.25 <span class="customItalic">New</span></p>
+                </div>
+                <div class="col arrivalItem" data-product="4">
+                    <img src="img/catalog/product4.jpg" alt="product">
+                    <p class="customGoose">With Patchwork Crochet</p>
+                    <p class="customPrice">£80.60</p>
+                </div>
+
+                <div class="col arrivalItem" data-product="5">
+                    <img src="img/catalog/product5.jpg" alt="product">
+                    <p class="customGoose">Levi’s Jeans for women <span class="customItalic">More colors</span></p>
+                </div>
+                <div class="col arrivalItem" data-product="6">
+                    <img src="img/catalog/product6.jpg" alt="product">
+                    <p class="customGoose">Boyfriend T-Shirt with Bohemian Print</p>
+                    <span class="priceWithoutDiscount">£120.00 </span><span class="discountProduct">-25% </span>
+                    <span class="customPrice">£90.00</span>
+                </div>
+                <div class="col arrivalItem" data-product="7">
+                    <img src="img/catalog/product7.jpg" alt="product">
+                    <p class="customGoose">Colour Block</p>
+                    <p class="customPrice">£550.50</p>
+                </div>
+                <div class="col arrivalItem" data-product="8">
+                    <img src="img/catalog/product8.jpg" alt="product">
+                    <p class="customGoose">With Patchwork Crochet</p>
+                    <p class="customPrice">£80.60</p>
+                </div>
+                <div class="col arrivalItem" data-product="9">
+                    <img src="img/catalog/product9.jpg" alt="product">
+                    <p class="customGoose">Oversized Cardigan</p>
+                    <p class="customPrice">£90.00</p>
+                </div>
+                <div class="col arrivalItem" data-product="10">
+                    <img src="img/catalog/product10.jpg" alt="product">
+                    <p class="customGoose">Paul & Joe Sister Jumper  with Neon Trims</p>
+                    <p class="customPrice">£19.75 <span class="customItalic">New</span></p>
+                </div>
+                <div class="col arrivalItem" data-product="11">
+                    <img src="img/catalog/product11.jpg" alt="product">
+                    <p class="customGoose">Only Busted Knee Jean</p>
+                    <p class="customPrice">£140.50</p>
+                </div>
+                <div class="col arrivalItem" data-product="12">
+                    <img src="img/catalog/product12.jpg" alt="product">
+                    <p class="customGoose">Boyfriend T-Shirt with Bohemian Print</p>
+                    <p class="customPrice">£85.75</p>
+                </div>
+            </div>
+            <div class="arrivalButton">
+                <a href="" class="customButton">Show more</a>
+            </div>
+        </div>
+    </section>
+
     <section class="banners">
         <a href="" class="">
             <div class="col col-1-2 leftBanner bannerBlock">
@@ -77,37 +165,7 @@
         </a>
     </section>
 
-    <section class="section arrivals NewArrivals">
-        <div class="container padding">
-            <h2 class="customH2">New arrivals</h2>
-            <div class="rowArrivals clearfix">
-                <div class="col arrivalItem" data-arrival="1">
-                    <img src="img/arrivals/arrival1.jpg" alt="arrival">
-                    <p class="customGoose">Straight Leg Jeans</p>
-                    <p class="customPrice">£55.00</p>
-                </div>
-                <div class="col arrivalItem" data-arrival="2">
-                    <img src="img/arrivals/arrival2.jpg" alt="arrival">
-                    <p class="customGoose">Boyfriend T-Shirt with
-                        Bohemian Print</p>
-                    <p class="customPrice">£34.25</p>
-                </div>
-                <div class="col arrivalItem" data-arrival="3">
-                    <img src="img/arrivals/arrival3.jpg" alt="arrival">
-                    <p class="customGoose">Only Busted Knee Jean</p>
-                    <p class="customPrice">£140.50</p>
-                </div>
-                <div class="col arrivalItem" data-arrival="4">
-                    <img src="img/arrivals/arrival4.jpg" alt="arrival">
-                    <p class="customGoose">Only Skinny Jeans</p>
-                    <p class="customPrice">£34.25</p>
-                </div>
-            </div>
-            <div class="arrivalButton">
-                <a href="" class="customButton">All arrivals</a>
-            </div>
-        </div>
-    </section>
+
     <footer class="footer">
         <div class="container clearfix padding">
             <div class="col col-1-2 leftFooter clearfix padding">
@@ -188,7 +246,9 @@
             </div>
         </div>
     </div>
-
+    <script src="js/catalog.js" defer></script>
     <script src="js/main.js"></script>
+
+
 </body>
 </html>

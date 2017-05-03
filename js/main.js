@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded',function() {
 App.prototype.init = function () {
     new Search();
     new Menu();
+    new OfferBanner(document.querySelector('.extraOff'));
    // new ChangeMarkup();
 
 };
@@ -21,7 +22,7 @@ ChangeMarkup.prototype = Object.create(App.prototype);
 Menu.prototype = Object.create(App.prototype);
 
 window.addEventListener('resize', function(event){
-    //new ChangeMarkup();
+    new OfferBanner(document.querySelector('.extraOff'));
 });
 
 function Search() {
@@ -36,14 +37,6 @@ function Menu () {
 }
 
 function ChangeMarkup() {
-    this.arrivalImgs = document.querySelectorAll('.arrivalItem img');
-    this.arrivalImgFirst = document.querySelectorAll('.arrivalItem img')[0];
-    for (var i = 0; i <  this.arrivalImgs.length; i++) {
-        this.arrivalImgs[i].style.cssText = "height:" +  this.arrivalImgFirst.clientHeight + 'px';
-    }
-
-
-
 
 }
 
