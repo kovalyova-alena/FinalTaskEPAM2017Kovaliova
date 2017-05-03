@@ -129,6 +129,15 @@ img {
 @media (max-width: 1024px) {
     .container {
         width: 92vw;
+
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
@@ -346,7 +355,7 @@ header .openSearch {
     border-bottom: 1px solid #e5e5e5;
     display: block;
     width: 100vw;
-    margin-left: -4vw;
+    margin-left: -40px;
 }
 
 
@@ -368,6 +377,10 @@ header .openSearch {
 }
 
 .sliderTablet {
+    display: none;
+}
+
+.sliderMobile {
     display: none;
 }
 /* ==================== END SLIDER SECTION =============*/
@@ -409,15 +422,10 @@ header .openSearch {
 }
 
 .bannerBlock img {
-    margin-top: -13%;
-    margin-left: 1%;
     transform: scale(1);
     transition: transform 1s;
 }
 
-.leftBanner img {
-    margin-top: -18%;
-}
 
 .rightBannerSmall {
     display: none;
@@ -606,7 +614,10 @@ header .openSearch {
     }
 
     .arrivalItem:nth-child(2) {
-        width: 38%;
+        width: 31%;
+        margin-left: 3%;
+        padding-right: 0;
+        margin-right: 4%;
     }
 
     .customGoose {
@@ -736,9 +747,6 @@ header .openSearch {
         margin-top: 15%;
     }
 
-    .leftBanner img {
-        margin-top: -23%;
-    }
 
     .leftBanner .overlay {
         top:10%;
@@ -764,9 +772,6 @@ header .openSearch {
         margin-top: 10px;
     }
 
-    .leftBanner img {
-        margin-top: -20%;
-    }
 
     .logoMobile {
         display: block;
@@ -849,15 +854,19 @@ header .openSearch {
     }
 
 
+
+
 }
 
 @media (max-width: 480px) {
-    .yearBlock, .shareBlock {
-        width: 50%;
+    .yearBlock {
+        width: 65%;
     }
 
     .shareBlock {
+        width: 35%;
         text-align: right;
+        padding-right: 0;
     }
 
     .legalBlock {
@@ -874,6 +883,7 @@ header .openSearch {
     .leftBanner {
         width: 100%;
         height: auto;
+        border-right: 0;
     }
 
     .customBanner {
@@ -892,10 +902,14 @@ header .openSearch {
 
     .customButton {
         font-size: 20px;
-        padding: 20px 80px;
+        padding: 18px 70px;
     }
     .customMiniHead {
         font-size: 14px;
+    }
+
+    .footer {
+        margin-top: 20%;
     }
     .footer .customMiniHead {
         font-size: 16px;
@@ -917,6 +931,8 @@ header .openSearch {
         width: 50%;
         padding-left: 0;
         padding-right: 0;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .arrivalItem[data-arrival='1'] {
@@ -926,15 +942,93 @@ header .openSearch {
         padding-left: 15px;
     }
 
-    .leftBanner img {
-        margin-top: -16%;
+
+    .leftFooter, .rightFooter {
+        width: 100%;
+        position: relative;
     }
+
+    .footerQuestions, .footerLinks,
+    .footerPhone, .footerCare {
+        width: 50%;
+    }
+
+    .rowSocial {
+        margin-top: 11%;
+        padding-right: 0;
+        padding-bottom: 8px;
+    }
+
+    .bottomBarList, .yearBlock {
+        text-align: left;
+    }
+
+    .bottomBarList li:first-child {
+        margin-left: 0;
+    }
+
+    .rowRightFooter,
+    .rowSocial{
+        padding-left: 0;
+        position: relative;
+    }
+
+    .legalBlock {
+        width: 80%;
+        margin-top: 0;
+    }
+
+    .IconsFooter {
+        width: 20%;
+        text-align: right;
+        float: left;
+        margin-top: 4px;
+    }
+
+    .footerPhone,.footerCare {
+        padding-left: 15px;
+    }
+
+    .sliderTablet {
+        display: none;
+    }
+
+    .sliderMobile {
+        display: block;
+
+    }
+
+    .leftFooter {
+        padding-bottom: 0;
+    }
+
+    .rowRightFooter {
+
+    }
+    .rowRightFooter:after, .leftFooter:after {
+        content: '';
+        background: #e5e5e5;
+        height: 1px;
+        width: 100vw;
+        margin-left: -40px;
+        position: relative;
+        left: 0;
+        bottom: -20px;
+
+    }
+
+    .bottomBar {
+        padding-top: 5%;
+        padding-bottom: 3%;
+    }
+
+
 
 }
 
-@media (min-width: 481px) and (max-width: 600px) {
-    .leftBanner img {
-        margin-top: -8%;
+@media (min-width: 481px) and (max-width: 650px) {
+    .bannerBlock img {
+        margin-top: 25px;
     }
 }
 
