@@ -128,7 +128,7 @@ img {
 
 @media (max-width: 1024px) {
     .container {
-        width: 92vw;
+        width: 92%;
 
     }
 }
@@ -190,7 +190,7 @@ a:hover {
     border: 1px solid #e5e5e5;
     color: #000;
     font: 26px/65px 'FuturaDemi';
-    transition: background 0.5s;
+    transition: 0.5s;
 }
 
 .customButton:hover {
@@ -395,30 +395,9 @@ header .openSearch {
 .banners {
     border-top: 1px solid #e5e5e5;
     position: relative;
-    display: inline-block;
-    width: 100%;
 }
 
-.banners:before, .banners:after {
-     content: '';
-     width: 50%;
-     height: 100%;
-     position: absolute;
-     top:0;
-    z-index: -1;
-}
-
-.banners:before {
-    left: 0;
-    background: #fff;
-}
-
-.banners:after {
-    right: 0;
-    background: #f7f7f7;
-}
 .bannerBlock {
-    height: 385px;
     overflow: hidden;
     position: relative;
 }
@@ -430,6 +409,7 @@ header .openSearch {
 .bannerBlock img {
     transform: scale(1);
     transition: transform 1s;
+    width: 100%;
 }
 
 
@@ -448,34 +428,30 @@ header .openSearch {
 
 /* ==================== SECTION NEW ARRIVALS =============*/
 .rowArrivals {
-    margin-top: 7.5%;
+    margin-top: 0;
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+
 }
+
 .arrivalItem {
     cursor: pointer;
     color: #000;
-}
-
-.arrivalItem:nth-child(4n+1) {
     padding-left: 0;
-    width: 22%;
-    text-align: left;
-}
-
-.arrivalItem:nth-child(4n+4) {
     padding-right: 0;
-    width: 22%;
-    text-align: right;
+    margin-top: 7%;
+    width: 240px;
+    text-align: center;
+    position: relative;
 }
 
-.arrivalItem:nth-child(4n+2),
-.arrivalItem:nth-child(4n+3) {
-    width: 28%;
-    text-align: center;
-}
 .arrivalButton {
     text-align: center;
     margin-top: 7%;
+    margin-bottom: 9%;
 }
+
 /* ================= END SECTION NEW ARRIVALS  =============*/
 
 /* ================= FOOTER  =============*/
@@ -483,7 +459,6 @@ header .openSearch {
 .footer {
     border-top: 1px solid #e5e5e5;
     border-bottom: 1px solid #e5e5e5;
-    margin-top: 5%;
 }
 
 .leftFooter {
@@ -596,44 +571,237 @@ header .openSearch {
 }
 /* ================= END BOTTOM BAR =============*/
 
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/*+++++++++++++  PAGE CATALOG  ++++++++++++++++++*/
+.filter {
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+}
+
+
+.filter .selectLabel {
+    display: block;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.filter select {
+    width: 100%;
+    position: absolute;
+    z-index: 100;
+    display: none;
+}
+
+.filter .display {
+    display: block;
+}
+
+.filter select:focus {
+    outline: none;
+}
+.p1, .p2 {
+    display: block;
+}
+
+.filter .filterTablet {
+    display: none;
+}
+
+.selectItem {
+    width: 20%;
+    position: relative;
+    float: left;
+}
+
+.mobileSelects {
+    background: #fff;
+}
+
+.mobileSelects .selectItem {
+    width: 100%;
+}
+
+.mobileSelects select {
+    position: relative;
+    height: 40px;
+}
+
+.mobileSelects select option {
+    float: left;
+    margin-right: 10px;
+}
+
+
+.products {
+    padding-top: 0;
+}
+
+.products .customItalic {
+    line-height: 24px;
+}
+
+.viewCover {
+    opacity: 0;
+    background: rgba(94,102,108,0.3);
+    position: absolute;
+    width: 100%;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: 0.5s;
+}
+
+.products .wrapperItem:hover .viewCover{
+    opacity: 1;
+}
+
+.quickView, .morePhotos {
+    font: 22px/65px 'FuturaDemi';
+}
+
+.quickView {
+    color: #f14a58;
+    padding-top: 38%;
+}
+
+.morePhotos {
+    color: #fff;
+}
+
+.priceWithoutDiscount,
+.discountProduct{
+    color: #757575;
+}
+
+.priceWithoutDiscount {
+    font: 14px/24px 'HelveticaNeueRegular';
+}
+
+.discountProduct {
+    font: 16px/24px 'TimesItalic';
+}
+
+
+.extraOff {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    padding-top: 40px;
+    z-index: 1;
+    cursor: default;
+}
+
+.extraOff .customMiniHead {
+    font: 26px/34px 'FuturaDemi';
+    width: 75%;
+    margin: 0 auto;
+}
+
+.extra {
+    color: #f14a58;
+}
+
+.offerExtra {
+    font: 16px/30px 'TimesItalic';
+    color: inherit;
+    width: 85%;
+    margin: 15px auto 0;
+}
+
+.wrapperItem {
+    position: relative;
+}
+
+.overlayIndivid {
+    position: absolute;
+    top: 60%;
+    width: 100%;
+}
+
+.overlayIndivid .customBanner {
+    color: #fff;
+}
+
+.hoverItalicText {
+    color: #fff;
+    font: 16px/26px 'TimesItalic';
+}
+
+.bannersCatalog .rightBannerSmall {
+    display: block;
+}
+
+.bannersCatalog .banners {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.bannersCatalog .customBanner,
+.bannersCatalog .leftBanner .customBannerDesc,
+.bannersCatalog .rightBanner .customPrice{
+    color: #fff;
+}
+
+.bannersCatalog .rightBanner .overlay,
+.bannersCatalog .rightBannerSmall .overlay{
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
+    right: inherit;
+    top:inherit;
+    text-align: center;
+}
+
+.bannersCatalog .rightBannerSmall .customBanner {
+    color: #f14a58;
+}
+
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+@media (min-width: 1025px) {
+
+    .arrivalItem {
+        margin-right: 70px;
+    }
+
+    .arrivalItem:nth-child(4n+4) {
+        margin-right: 0;
+    }
+
+    .extraOff {
+        width: 1180px;
+    }
+}
 
 @media (min-width: 1025px) and (max-width: 1199px) {
     .menu li {
         margin-right: 45px;
     }
 
-    .arrivalItem:nth-child(4n+2) img,
-    .arrivalItem:nth-child(4n+3) img {
-        max-width: 207px;
+    .arrivalItem {
+        margin-right: 15px;
     }
+
+    .extraOff {
+        width: 1010px;
+    }
+
 }
 @media (max-width: 1024px) {
     .NewArrivals .arrivalItem:last-child {
         display: none;
     }
 
-    .arrivalItem:nth-child(3n+1),
+    .arrivalItem {
+        margin-right: 8%;
+        width: 28%;
+    }
+
     .arrivalItem:nth-child(3n+3) {
-        width: 31%;
-        padding-right: 0;
-    }
-    .arrivalItem:nth-child(3n+3) {
-        text-align: right;
+        margin-right: 0;
     }
 
-    .arrivalItem:nth-child(3n+1) {
-        padding-left: 0;
-        text-align: left;
-
-    }
-
-    .arrivalItem:nth-child(3n+2) {
-        width: 31%;
-        margin-left: 3%;
-        padding-right: 0;
-        margin-right: 4%;
-        text-align: center;
-    }
 
     .customGoose {
         width: 90%;
@@ -705,12 +873,12 @@ header .openSearch {
 
     .rightBannerSmall {
         display: block;
-        width: 33%;
+        width: 33.3%;
         text-align: center;
     }
 
     .leftBanner {
-        width: 66%;
+        width: 66.7%;
     }
 
     .sliderTablet {
@@ -720,9 +888,6 @@ header .openSearch {
 
     .banners:after {
         background: transparent;
-    }
-    .rightBannerSmall img {
-        margin-top: 26%;
     }
 
     .rightBannerSmall .overlay {
@@ -751,6 +916,45 @@ header .openSearch {
     .searchForm {
         display: none;
     }
+
+    .extraOff {
+        width: 91vw;
+    }
+
+    .bannersCatalog .rightBannerSmall {
+        display: none;
+    }
+
+    .bannersCatalog .rightBanner {
+        display: block;
+        width: 33.3%;
+    }
+
+    .bannersCatalog.banners {
+        border-bottom: none;
+    }
+
+    .desktopSelects {
+        display: none;
+    }
+
+    .mobileSelects {
+        display: block;
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+        left: 0;
+    }
+
+    .filter .filterTablet {
+        display: block;
+    }
+
+    .mobileSelects select {
+        display: block;
+    }
+
+
 }
 
 @media (max-width: 768px) {
@@ -868,12 +1072,28 @@ header .openSearch {
         color: #f14a58;
     }
 
+    .bannerBlock {
+        height: auto;
+    }
 
+    .quickView, .morePhotos {
+        line-height: 26px;
+    }
 
 
 }
 
 @media (max-width: 480px) {
+    .arrivalItem:nth-child(3n+3) {
+        margin-right: 8%;
+    }
+    .arrivalItem:nth-child(2n+2) {
+        margin-right: 0;
+    }
+
+    .arrivalItem {
+        width: 46%;
+    }
     .yearBlock {
         width: 65%;
     }
@@ -909,6 +1129,10 @@ header .openSearch {
         font-size: 30px;
     }
 
+    .customGoose {
+        line-height: 20px;
+    }
+
     .customGoose, .customPrice,
     .footerList li a,
     .footerCustom{
@@ -923,8 +1147,8 @@ header .openSearch {
         font-size: 14px;
     }
 
-    .footer {
-        margin-top: 20%;
+    .arrivalButton {
+        margin-bottom: 20%;
     }
     .footer .customMiniHead {
         font-size: 16px;
@@ -938,23 +1162,6 @@ header .openSearch {
 
     .NewArrivals .arrivalItem:nth-child(3){
         display: none;
-    }
-
-    .arrivalItem:nth-child(2),
-    .arrivalItem:nth-child(1)
-    {
-        width: 50%;
-        padding-left: 0;
-        padding-right: 0;
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    .arrivalItem:nth-child(1) {
-        padding-right: 15px;
-    }
-    .arrivalItem:nth-child(2) {
-        padding-left: 15px;
     }
 
 
@@ -1037,65 +1244,13 @@ header .openSearch {
         padding-bottom: 3%;
     }
 
-}
-
-@media (min-width: 481px) and (max-width: 650px) {
-    .bannerBlock img {
-        margin-top: 25px;
+    .extraOff .customMiniHead {
+        font: 20px/30px 'FuturaDemi';
     }
-}
-/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
-/*+++++++++++++  PAGE CATALOG  ++++++++++++++++++*/
-.products {
-    padding-top: 0;
-}
+    .bannersCatalog .rightBanner {
+        display: none;
+    }
 
-.products .customItalic {
-    line-height: 24px;
 }
 
-.priceWithoutDiscount,
-.discountProduct{
-    color: #757575;
-}
-
-.priceWithoutDiscount {
-    font: 14px/24px 'HelveticaNeueRegular';
-}
-
-.discountProduct {
-    font: 16px/24px 'TimesItalic';
-}
-
-.products .rowArrivals {
-    margin-top: 0;
-    display: flex;
-    flex-flow: row wrap;
-    position: relative;
-}
-
-.products .arrivalItem {
-    margin-top: 7%;
-}
-
-.extraOff {
-    position: absolute;
-    text-align: center;
-    width: 100%;
-    padding-top: 4%;
-}
-
-.extraOff .customMiniHead {
-    font: 26px/34px 'FuturaDemi';
-}
-
-.extra {
-    color: #f14a58;
-}
-
-.offerExtra {
-    font: 16px/30px 'TimesItalic';
-    color: inherit;
-    margin-bottom: 0;
-}

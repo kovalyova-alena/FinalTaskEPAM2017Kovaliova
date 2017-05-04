@@ -47,14 +47,42 @@
     <section class="filter">
         <div class="container">
             <form action="" class="form formFilter">
-                <label for="Fashion">Fashion</label>
-                <select name="fashion" id="Fashion">
-                    <option value="Casual">Casual Style</option>
-                    <option value="NewLook">New Look</option>
-                    <option value="Sport">Sport</option>
-                    <option value="Vintage">Vintage</option>
-                    <option value="Classic" >Classic</option>
-                </select>
+                <label for="Fashion" class="filterTablet">
+                    <span class="fashion">fashion</span>
+                    <span class="color">red</span>
+                    <span class="size">20 UK</span>
+                </label>
+                <div class="desktopSelects clearfix">
+                    <div class="selectItem" data-select="1">
+                        <div class="selectLabel">
+                            <span class="nameFilter">Fashion</span>
+                            <span class="valueFilter"></span>
+                        </div>
+                        <select name="fashion" id="Fashion" size="10">
+                            <option value="Casual">Casual Style</option>
+                            <option value="NewLook">New Look</option>
+                            <option value="Sport">Sport</option>
+                            <option value="Vintage">Vintage</option>
+                            <option value="Classic" >Classic</option>
+                        </select>
+                    </div>
+                    <div class="selectItem"  data-select="2">
+                        <div class="selectLabel">
+                            <span class="p1">Fashion</span>
+                            <span class="p2">Vintage</span>
+                        </div>
+                        <select name="fashion" id="f" size="10">
+                            <option value="Casual">Casual Style</option>
+                            <option value="NewLook">New Look</option>
+                            <option value="Sport">Sport</option>
+                            <option value="Vintage">Vintage</option>
+                            <option value="Classic" >Classic</option>
+                        </select>
+                    </div>
+                </div>
+
+
+
             </form>
         </div>
     </section>
@@ -63,7 +91,14 @@
         <div class="container padding">
             <div class="rowArrivals clearfix">
                 <div class="col arrivalItem" data-product="1">
-                    <img src="img/catalog/product1.jpg" alt="product">
+                    <div class="wrapperItem">
+                        <img src="img/catalog/product1.jpg" alt="product">
+                        <div class="viewCover">
+                            <p class="quickView">Quick view</p>
+                            <p class="morePhotos">More photos</p>
+                        </div>
+                    </div>
+
                     <p class="customGoose">Only Skinny Jeans</p>
                     <p class="customPrice">£65.50</p>
                     <div class="extraOff">
@@ -74,58 +109,129 @@
                     </div>
                 </div>
                 <div class="col arrivalItem" data-product="2">
-                    <img src="img/catalog/product2.jpg" alt="product">
+                    <div class="wrapperItem">
+                        <img src="img/catalog/product2.jpg" alt="product">
+                        <div class="viewCover">
+                            <p class="quickView">Quick view</p>
+                            <p class="morePhotos">More photos</p>
+                        </div>
+                    </div>
                     <p class="customGoose">Neck Knitted Jumper</p>
                     <p class="customPrice">£76.25</p>
                 </div>
                 <div class="col arrivalItem" data-product="3">
-                    <img src="img/catalog/product3.jpg" alt="product">
+                    <div class="wrapperItem">
+                        <img src="img/catalog/product3.jpg" alt="product">
+                        <div class="viewCover">
+                            <p class="quickView">Quick view</p>
+                            <p class="morePhotos">More photos</p>
+                        </div>
+                    </div>
                     <p class="customGoose">Turtle Neck Jumper in Rib</p>
                     <p class="customPrice">£130.25 <span class="customItalic">New</span></p>
                 </div>
                 <div class="col arrivalItem" data-product="4">
-                    <img src="img/catalog/product4.jpg" alt="product">
+                    <div class="wrapperItem">
+                        <img src="img/catalog/product4.jpg" alt="product">
+                        <div class="viewCover">
+                            <p class="quickView">Quick view</p>
+                            <p class="morePhotos">More photos</p>
+                        </div>
+                    </div>
                     <p class="customGoose">With Patchwork Crochet</p>
                     <p class="customPrice">£80.60</p>
                 </div>
 
                 <div class="col arrivalItem" data-product="5">
-                    <img src="img/catalog/product5.jpg" alt="product">
+                    <div class="wrapperItem">
+                        <img src="img/catalog/product5.jpg" alt="product">
+                        <div class="viewCover">
+                            <p class="quickView">Quick view</p>
+                            <p class="morePhotos">More photos</p>
+                        </div>
+                        <div class="overlayIndivid">
+                            <p class="customBanner">Levi's</p>
+                            <p class="hoverItalicText">Buyer's choice</p>
+                        </div>
+                    </div>
+
                     <p class="customGoose">Levi’s Jeans for women <span class="customItalic">More colors</span></p>
                 </div>
                 <div class="col arrivalItem" data-product="6">
-                    <img src="img/catalog/product6.jpg" alt="product">
+                    <div class="wrapperItem">
+                        <img src="img/catalog/product6.jpg" alt="product">
+                        <div class="viewCover">
+                            <p class="quickView">Quick view</p>
+                            <p class="morePhotos">More photos</p>
+                        </div>
+                    </div>
                     <p class="customGoose">Boyfriend T-Shirt with Bohemian Print</p>
                     <span class="priceWithoutDiscount">£120.00 </span><span class="discountProduct">-25% </span>
                     <span class="customPrice">£90.00</span>
                 </div>
                 <div class="col arrivalItem" data-product="7">
-                    <img src="img/catalog/product7.jpg" alt="product">
+                    <div class="wrapperItem">
+                        <img src="img/catalog/product7.jpg" alt="product">
+                        <div class="viewCover">
+                            <p class="quickView">Quick view</p>
+                            <p class="morePhotos">More photos</p>
+                        </div>
+                    </div>
                     <p class="customGoose">Colour Block</p>
                     <p class="customPrice">£550.50</p>
                 </div>
                 <div class="col arrivalItem" data-product="8">
-                    <img src="img/catalog/product8.jpg" alt="product">
+                    <div class="wrapperItem">
+                        <img src="img/catalog/product8.jpg" alt="product">
+                        <div class="viewCover">
+                            <p class="quickView">Quick view</p>
+                            <p class="morePhotos">More photos</p>
+                        </div>
+                    </div>
                     <p class="customGoose">With Patchwork Crochet</p>
                     <p class="customPrice">£80.60</p>
                 </div>
                 <div class="col arrivalItem" data-product="9">
-                    <img src="img/catalog/product9.jpg" alt="product">
+                    <div class="wrapperItem">
+                        <img src="img/catalog/product9.jpg" alt="product">
+                        <div class="viewCover">
+                            <p class="quickView">Quick view</p>
+                            <p class="morePhotos">More photos</p>
+                        </div>
+                    </div>
                     <p class="customGoose">Oversized Cardigan</p>
                     <p class="customPrice">£90.00</p>
                 </div>
                 <div class="col arrivalItem" data-product="10">
-                    <img src="img/catalog/product10.jpg" alt="product">
+                    <div class="wrapperItem">
+                        <img src="img/catalog/product10.jpg" alt="product">
+                        <div class="viewCover">
+                            <p class="quickView">Quick view</p>
+                            <p class="morePhotos">More photos</p>
+                        </div>
+                    </div>
                     <p class="customGoose">Paul & Joe Sister Jumper  with Neon Trims</p>
                     <p class="customPrice">£19.75 <span class="customItalic">New</span></p>
                 </div>
                 <div class="col arrivalItem" data-product="11">
-                    <img src="img/catalog/product11.jpg" alt="product">
+                    <div class="wrapperItem">
+                        <img src="img/catalog/product11.jpg" alt="product">
+                        <div class="viewCover">
+                            <p class="quickView">Quick view</p>
+                            <p class="morePhotos">More photos</p>
+                        </div>
+                    </div>
                     <p class="customGoose">Only Busted Knee Jean</p>
                     <p class="customPrice">£140.50</p>
                 </div>
                 <div class="col arrivalItem" data-product="12">
-                    <img src="img/catalog/product12.jpg" alt="product">
+                    <div class="wrapperItem">
+                        <img src="img/catalog/product12.jpg" alt="product">
+                        <div class="viewCover">
+                            <p class="quickView">Quick view</p>
+                            <p class="morePhotos">More photos</p>
+                        </div>
+                    </div>
                     <p class="customGoose">Boyfriend T-Shirt with Bohemian Print</p>
                     <p class="customPrice">£85.75</p>
                 </div>
@@ -136,32 +242,33 @@
         </div>
     </section>
 
-    <section class="banners">
+    <section class="banners clearfix bannersCatalog">
         <a href="" class="">
-            <div class="col col-1-2 leftBanner bannerBlock">
-                <img src="img/banners/banner0.jpg" alt="NikeRed">
+            <div class="col col-1-2 leftBanner padding bannerBlock">
+                <img src="img/banners/banner2.jpg" alt="ForMen">
                 <div class="overlay">
-                    <p class="customBanner">Nike Red</p>
-                    <p class="customBannerDesc">New</p>
+                    <p class="customBanner">Adidas Blue</p>
+                    <p class="customBannerDesc">For men</p>
                 </div>
             </div>
         </a>
         <a href="" class="">
-            <div class="col col-1-2 rightBanner bannerBlock">
-                <img src="img/banners/banner1.jpg" alt="CapsHats">
+            <div class="col col-1-4 rightBanner padding bannerBlock">
+                <img src="img/banners/banner3.jpg" alt="RepairPatches">
                 <div class="overlay">
-                    <p class="customBanner">Caps & Hats</p>
-                    <p class="customBannerDesc">Sale -50%</p>
+                    <p class="customBanner">Repair Patches</p>
+                    <p class="customPrice">£ 150.50</p>
                 </div>
             </div>
-            <div class="col rightBannerSmall bannerBlock">
-                <img src="img/banners/banner3.png" alt="Sale">
+            </a>
+        <a href="">
+            <div class="col col-1-4 rightBannerSmall padding bannerBlock">
+                <img src="img/banners/banner4.jpg" alt="Sale">
                 <div class="overlay">
                     <p class="customBanner">Sale</p>
                     <p class="customBannerDesc">-70%</p>
                 </div>
             </div>
-
         </a>
     </section>
 
@@ -246,7 +353,6 @@
             </div>
         </div>
     </div>
-    <script src="js/catalog.js" defer></script>
     <script src="js/main.js"></script>
 
 
