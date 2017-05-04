@@ -577,6 +577,7 @@ header .openSearch {
 .filter {
     border-bottom: 1px solid #e5e5e5;
     border-top: 1px solid #e5e5e5;
+    position: relative;
 }
 
 
@@ -584,23 +585,49 @@ header .openSearch {
     display: block;
     cursor: pointer;
     z-index: 10;
+    padding-left: 15px;
+    position: relative;
 }
 
 .filter select {
     width: 100%;
     position: absolute;
     z-index: 100;
+    top: 65px;
     display: none;
+    overflow-y: auto;
+    border: none;
+    -moz-appearance: none;
+    text-indent: 15px;
+    text-overflow: '';
+    -ms-appearance: none;
+    appearance: none!important;
+}
+
+.filter option {
+    font: 14px 'FuturaDemi';
+    height: 30px;
+    cursor: pointer;
+    padding-top: 5px;
+}
+
+.filter option:hover{
+    background: #f14a58;
+    color: #fff;
 }
 
 .filter .display {
     display: block;
+    border-top: 0;
+    border-bottom: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-left: 1px solid #e5e5e5;
 }
 
 .filter select:focus {
     outline: none;
 }
-.p1, .p2 {
+.nameFilter, .valueFilter {
     display: block;
 }
 
@@ -608,10 +635,42 @@ header .openSearch {
     display: none;
 }
 
+.filter.firstSelected:before,
+.filter.lastSelected:after {
+    content: '';
+    background: #f7f7f7;
+    width: 40%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    z-index: -10;
+}
+
+.filter.lastSelected:after {
+   right: 0;
+}
+
+.filter.firstSelected:before {
+    left: 0;
+}
+
 .selectItem {
-    width: 20%;
+    width: 16.66%;
     position: relative;
     float: left;
+    height: 65px;
+    background: #fff;
+}
+
+.selectedItem {
+    background: #f7f7f7;
+}
+
+.selectItem:after {
+    content: url('../img/catalog/arrowSelect.png');
+    position: absolute;
+    right: 30px;
+    top: 25px;
 }
 
 .mobileSelects {
@@ -771,6 +830,21 @@ header .openSearch {
 
     .extraOff {
         width: 1180px;
+    }
+
+    .nameFilter {
+        font: 18px/65px 'FuturaDemi';
+        color: inherit;
+    }
+
+    .nameFilterSmall {
+        font: 12px/40px 'HelveticaNeueBold';
+    }
+
+    .valueFilter {
+        font: 18px'FuturaDemi';
+        color: #f14a58;
+        margin-top: -10px;
     }
 }
 

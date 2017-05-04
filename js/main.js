@@ -60,7 +60,6 @@ function Filter (filter) {
             this.options[i].addEventListener('click', this.closeSelect.bind(this, this.options[i]));
         }
     }
-
 }
 
 function OfferBanner (offer) {
@@ -82,7 +81,6 @@ Menu.prototype.openMenu = function (e) {
 
     document.querySelector('.header').classList.toggle('openMenu');
     this.nav.classList.toggle('display');
-
 };
 
 Filter.prototype.openFilter = function () {
@@ -101,15 +99,41 @@ Filter.prototype.openSelect = function (e) {
         }
     }
     target.querySelector('select').classList.toggle('display');
+
+    var optionLength = target.querySelector('select').children.length;
+    target.querySelector('select').setAttribute('size', optionLength);
 };
 
 Filter.prototype.closeSelect = function (option) {
-    option.closest('select').classList.remove('display');
-    var nameFilter = document.querySelector('.nameFilter');
-    var valueFilter = document.querySelector('.valueFilter');
-    valueFilter.innerHTML = option.value;
+    this.valueFilter = option.closest('.selectItem').querySelector('.valueFilter');
+    this.nameFilter = option.closest('.selectItem').querySelector('.nameFilter');
 
-    
+    option.closest('select').classList.remove('display');
+
+    var optionVal = (option.value === 'notSelected') ?
+                    this.filterStyles('remove', '', option) :
+                    this.filterStyles('add', option.innerText, option);
+
+    return optionVal;
+
+};
+
+Filter.prototype.filterStyles = function (method, value, option) {
+    var firstItem = document.querySelector('.desktopSelects').firstElementChild;
+    var lastItem = document.querySelector('.desktopSelects').lastElementChild;
+
+    option.closest('.selectItem').classList[method]('selectedItem');
+    this.nameFilter.classList[method]('nameFilterSmall');
+    this.valueFilter.innerHTML = value;
+
+
+    if (option.closest('.selectItem') === firstItem) {
+        document.querySelector('.filter').classList[method]('firstSelected');
+    }
+    if (option.closest('.selectItem') === lastItem) {
+        document.querySelector('.filter').classList[method]('lastSelected');
+    }
+
 };
 
 
