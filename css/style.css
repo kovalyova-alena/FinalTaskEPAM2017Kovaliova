@@ -819,6 +819,109 @@ header .openSearch {
 
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+
+/*+++++++++++++++++++PAGE ITEM++++++++++++++++++++++++++*/
+.breadCrumbs {
+    border-top: 1px solid #e5e5e5;
+}
+.backToCatalog {
+    font: 16px/65px 'FuturaDemi';
+}
+
+.fullItem {
+    width: 78%;
+}
+
+.fullItem img {
+    width: 100%;
+}
+
+.tumbs {
+    width: 22%;
+}
+
+.tumb {
+    position: relative;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.tumb:hover .overlay {
+    content: '';
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+}
+
+.chooseOptions {
+    display: none;
+}
+
+.chooseOptions.display {
+    display: block;
+}
+
+.messageAboutChoice {
+    font: 16px/34px 'FuturaDemi';
+    text-align: center;
+    color: #f14a58;
+}
+
+.rowInfoProduct {
+    text-align: center;
+    clear: both;
+    margin-top: 2%;
+}
+
+.nameProduct {
+    font: 26px 'RobotoBold';
+}
+
+.priceItem {
+    font: 18px/45px 'RobotoRegular';
+}
+
+.descProduct {
+    font: 16px/30px 'Times New Roman';
+    font-style: italic;
+    width: 57%;
+    margin: 0 auto;
+}
+
+.rowOptionsProduct {
+    text-align: center;
+    margin-top: 40px;
+}
+.optionProductTitle {
+    font: 24px/34px 'RobotoBold';
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.listOptions li {
+    cursor: pointer;
+    display: inline;
+    width: 145px;
+    margin-right: 60px;
+    padding: 20px 40px;
+    border: 1px solid #e5e5e5;
+    font: 24px/65px 'OpenSansSemiBold';
+}
+.listOptions li:last-child {
+    margin-right: 0;
+}
+
+.activeOption {
+    background: #707070;
+}
+
+.color {
+    margin-top: 40px;
+}
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 @media (min-width: 1025px) {
 
     .arrivalItem {
@@ -1027,6 +1130,7 @@ header .openSearch {
         font: 16px/65px 'FuturaDemi';
         margin-bottom: 0;
         height: 65px;
+        overflow-y: hidden;
     }
 
     .mobileSelects select {
@@ -1060,12 +1164,33 @@ header .openSearch {
         margin-top: 15px;
     }
 
-    .mobileSelects select option:first-child {
-
+    .breadCrumbs {
+        border-bottom: 1px solid #e5e5e5;
     }
 
-    select:-internal-list-box option:checked {
-        background-color: transparent;
+    .fullItem,.tumbs  {
+        width: 100%;
+    }
+
+    .tumbs {
+        margin-top: 30px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+    }
+
+    .tumb {
+        width: 30%;
+        margin-right: 1%;
+    }
+
+    .tumb:last-child {
+        text-align: right;
+        margin-right: 0;
+    }
+
+    .tumb:nth-child(2) {
+        text-align: center;
     }
 
 
@@ -1085,6 +1210,22 @@ header .openSearch {
     .leftBanner .overlay {
         top:10%;
     }
+
+    .listOptions li {
+        display: block;
+        width: 45%;
+        padding: 0;
+        margin-right: 0;
+        margin-top: 20px;
+    }
+
+    .listOptions li:nth-child(2n+1) {
+        float: left;
+    }
+    .listOptions li:nth-child(2n) {
+        float: right;
+    }
+
 
 }
 @media (max-width: 700px) {

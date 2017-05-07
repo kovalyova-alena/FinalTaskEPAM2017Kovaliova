@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Start Page</title>
+    <title>Item Page</title>
 </head>
 <body>
     <header class="header">
@@ -17,7 +17,8 @@
                 </div>
                 <div class="col col-1-2 logInBlock padding-right">
                     <a href="#" class="singUp hideMobile">E-mail sing up</a>
-                    <a href="shopping_bag.html" class="bag">Bag <span class="commonPrice"></span></a>
+                    <a href="#" class="bag">Bag</a>
+                    <a href="" class="commonPrice"></a>
                 </div>
                 <div class="col mobileMenu">
                     <a href="" class="iconMenu"></a>
@@ -43,71 +44,100 @@
             </nav>
         </div>
     </header>
-    <section class="slider">
-        <img src="img/slider/slider1.png" alt="slider" class="slider sliderDesktop">
-        <img src="img/slider/slider2.jpg" alt="slider" class="slider sliderTablet">
-        <img src="img/slider/slider3.jpg" alt="slider" class="slider sliderMobile">
+    <section class="breadCrumbs">
+        <div class="container">
+            <p>
+                <a href="catalog.html" class="backToCatalog">>Back to catalog</a>
+            </p>
+        </div>
     </section>
-    <section class="banners">
+
+    <section class="itemProduct">
+        <div class="container">
+            <div class="row">
+                <div class=" col fullItem">
+                    <img src="img/item/full.jpg" alt="fullItem">
+                </div>
+                <div class=" col tumbs">
+                    <div class="tumb1 tumb">
+                        <img src="img/item/tumb1.jpg" alt="itemProduct">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="tumb1 tumb">
+                        <img src="img/item/tumb2.jpg" alt="itemProduct">
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="tumb1 tumb">
+                        <img src="img/item/tumb3.jpg" alt="itemProduct">
+                        <div class="overlay"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="rowInfoProduct">
+                <p class="nameProduct">Dark classic fit suit</p>
+                <p class="priceItem">£180.60</p>
+                <p class="descProduct">Featuring fine Italian wool, this elegant suit has pick-stitch edging, cascade buttons at the cuffs and a subtle stripe pattern throughout. </p>
+            </div>
+            <div class="rowOptionsProduct">
+                <p class="size optionProductTitle">Size</p>
+                <div class="sizeOptions">
+                    <ul class="listOptions clearfix" data-option="size">
+                        <li>UK 52</li>
+                        <li>UK 54</li>
+                        <li>UK 56</li>
+                    </ul>
+                </div>
+                <p class="optionProductTitle color">Color</p>
+                <div class="colorOptions">
+                    <ul class="listOptions clearfix" data-option="color">
+                        <li>Black</li>
+                        <li>Blue</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="chooseOptions">
+            <p class="messageAboutChoice">Please choose all options</p>
+        </div>
+        <div class="arrivalButton">
+            <a href="" class="customButton addToBag">Add to bag</a>
+        </div>
+
+    </section>
+
+    <section class="banners clearfix bannersCatalog">
         <a href="" class="">
-            <div class="col col-1-2 leftBanner bannerBlock">
-                <img src="img/banners/banner0.jpg" alt="NikeRed">
+            <div class="col col-1-2 leftBanner padding bannerBlock">
+                <img src="img/banners/banner2.jpg" alt="ForMen">
                 <div class="overlay">
-                    <p class="customBanner">Nike Red</p>
-                    <p class="customBannerDesc">New</p>
+                    <p class="customBanner">Adidas Blue</p>
+                    <p class="customBannerDesc">For men</p>
                 </div>
             </div>
         </a>
         <a href="" class="">
-            <div class="col col-1-2 rightBanner bannerBlock">
-                <img src="img/banners/banner1.jpg" alt="CapsHats">
+            <div class="col col-1-4 rightBanner padding bannerBlock">
+                <img src="img/banners/banner3.jpg" alt="RepairPatches">
                 <div class="overlay">
-                    <p class="customBanner">Caps & Hats</p>
-                    <p class="customBannerDesc">Sale -50%</p>
+                    <p class="customBanner">Repair Patches</p>
+                    <p class="customPrice">£ 150.50</p>
                 </div>
             </div>
-            <div class="col rightBannerSmall bannerBlock">
-                <img src="img/banners/banner3.png" alt="Sale">
+            </a>
+        <a href="">
+            <div class="col col-1-4 rightBannerSmall padding bannerBlock">
+                <img src="img/banners/banner4.jpg" alt="Sale">
                 <div class="overlay">
                     <p class="customBanner">Sale</p>
                     <p class="customBannerDesc">-70%</p>
                 </div>
             </div>
-
         </a>
     </section>
 
-    <section class="section arrivals NewArrivals">
-        <div class="container padding">
-            <h2 class="customH2">New arrivals</h2>
-            <div class="rowArrivals clearfix">
-                <div class="col arrivalItem" data-arrival="1">
-                    <img src="img/arrivals/arrival1.jpg" alt="arrival">
-                    <p class="customGoose">Straight Leg Jeans</p>
-                    <p class="customPrice">£55.00</p>
-                </div>
-                <div class="col arrivalItem" data-arrival="2">
-                    <img src="img/arrivals/arrival2.jpg" alt="arrival">
-                    <p class="customGoose">Boyfriend T-Shirt with
-                        Bohemian Print</p>
-                    <p class="customPrice">£34.25</p>
-                </div>
-                <div class="col arrivalItem" data-arrival="3">
-                    <img src="img/arrivals/arrival3.jpg" alt="arrival">
-                    <p class="customGoose">Only Busted Knee Jean</p>
-                    <p class="customPrice">£140.50</p>
-                </div>
-                <div class="col arrivalItem" data-arrival="4">
-                    <img src="img/arrivals/arrival4.jpg" alt="arrival">
-                    <p class="customGoose">Only Skinny Jeans</p>
-                    <p class="customPrice">£34.25</p>
-                </div>
-            </div>
-            <div class="arrivalButton">
-                <a href="" class="customButton">All arrivals</a>
-            </div>
-        </div>
-    </section>
+
     <footer class="footer">
         <div class="container clearfix padding">
             <div class="col col-1-2 leftFooter clearfix padding">
@@ -188,7 +218,10 @@
             </div>
         </div>
     </div>
-
     <script src="js/main.js"></script>
+
+
 </body>
 </html>
+
+
