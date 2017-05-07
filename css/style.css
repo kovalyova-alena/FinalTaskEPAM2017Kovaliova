@@ -601,6 +601,7 @@ header .openSearch {
     text-indent: 15px;
     text-overflow: '';
     -ms-appearance: none;
+    -webkit-appearance: none;
     appearance: none!important;
 }
 
@@ -1022,11 +1023,51 @@ header .openSearch {
 
     .filter .filterTablet {
         display: block;
+        cursor: pointer;
+        font: 16px/65px 'FuturaDemi';
+        margin-bottom: 0;
+        height: 65px;
     }
 
     .mobileSelects select {
         display: block;
     }
+    .filter select {
+        top: 0;
+        overflow-y: scroll;
+    }
+
+    .filter option {
+        font: 36px/65px 'FuturaDemi';
+        color: #a8a8a8;
+        padding-top: 0;
+    }
+
+    .filter option:checked {
+        color: #000;
+    }
+
+    .nameFilter {
+        font: 12px 'HelveticaNeueBold';
+        color: #000;
+    }
+
+    .filter option:hover {
+        background: transparent;
+    }
+
+    .mobileSelects .selectItem {
+        margin-top: 15px;
+    }
+
+    .mobileSelects select option:first-child {
+
+    }
+
+    select:-internal-list-box option:checked {
+        background-color: transparent;
+    }
+
 
 
 }

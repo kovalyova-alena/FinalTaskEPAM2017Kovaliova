@@ -59,6 +59,14 @@ function Filter (filter) {
         for (var i = 0; i < this.options.length; i++) {
             this.options[i].addEventListener('click', this.closeSelect.bind(this, this.options[i]));
         }
+    } else {
+        this.filterTablet = document.querySelector('.filterTablet');
+
+        for (var j = 0; j < this.selectItems.length; j++) {
+            this.selectItems[j].querySelector('select').children[0].setAttribute('selected', 'selected');
+            this.filterTablet.innerHTML +=  this.selectItems[j].querySelector('select').children[0].innerHTML + ',';
+
+        }
     }
 }
 
@@ -135,6 +143,10 @@ Filter.prototype.filterStyles = function (method, value, option) {
     }
 
 };
+
+
+
+
 
 
 
