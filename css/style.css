@@ -279,6 +279,10 @@ button:focus {
     color: inherit;
 }
 
+.menu li a.activeLink {
+    color: #f14a58;
+}
+
 .menu li a:hover {
     color: #f14a58;
 }
@@ -910,6 +914,10 @@ header .openSearch {
     border: 1px solid #e5e5e5;
     font: 24px/65px 'OpenSansSemiBold';
 }
+
+.listOptions li:hover {
+    background: #707070;
+}
 .listOptions li:last-child {
     margin-right: 0;
 }
@@ -920,6 +928,49 @@ header .openSearch {
 
 .color {
     margin-top: 40px;
+}
+
+.bagTitle {
+    border-top: 1px solid #e5e5e5;
+}
+.titleShoppingBag {
+    font: 24px/65px 'FuturaDemi';
+}
+
+.shoppingBlock {
+    width: 50%;
+}
+
+.shopImg {
+    width: 45%;
+    float: left;
+}
+
+.shopOptions {
+    width: 55%;
+    float: left;
+
+}
+
+.productBag {
+    font: 14px/24px 'HelveticaNeueBold';
+}
+
+.optionBag {
+    font: 12px/24px 'HelveticaNeueRegular';
+    margin-bottom: 0;
+    color: #000;
+}
+
+.removeItem {
+    font: 13px/65px 'OpenSansBold';
+    color: #f14a58;
+    cursor: pointer;
+}
+
+.priceBag {
+    font: 14px/65px 'Helvetica Neue';
+    text-align: center;
 }
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 @media (min-width: 1025px) {
@@ -1324,9 +1375,6 @@ header .openSearch {
         display: block;
     }
 
-    .menu li a.activeLink {
-        color: #f14a58;
-    }
 
     .bannerBlock {
         height: auto;

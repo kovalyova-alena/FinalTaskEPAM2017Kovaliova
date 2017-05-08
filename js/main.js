@@ -16,7 +16,8 @@ App.prototype.init = function () {
     new Filter(document.querySelector('.formFilter'));
     new ProductOptions(document.querySelector('.listOptions'));
     new Thumbnail(document.querySelector('.tumbs'));
-    new AddToBag(document.querySelector('.addToBag'));
+    new Bag(document.querySelector('.addToBag'));
+    new DetailItem(document.querySelector('.rowArrivals'));
     if (localStorage && sessionStorage) {
        this.storage();
     }
@@ -36,7 +37,8 @@ OfferBanner.prototype = Object.create(App.prototype);
 Filter.prototype = Object.create(App.prototype);
 ProductOptions.prototype = Object.create(App.prototype);
 Thumbnail.prototype = Object.create(App.prototype);
-AddToBag.prototype = Object.create(App.prototype);
+Bag.prototype = Object.create(App.prototype);
+DetailItem.prototype = Object.create(App.prototype);
 
 window.addEventListener('resize', function(event){
     new OfferBanner(document.querySelector('.extraOff'));
@@ -62,12 +64,14 @@ function Thumbnail(thumbnail) {
     this.thumbnailBlock.addEventListener('click', this.doFullImg.bind(this));
 }
 
-function AddToBag (button) {
+function Bag (button) {
     if (!button) return;
 
     this.buttonAdd = button;
     this.count = 1;
     this.commonPrice = 0;
+    this.id = 1;
+    this.objCount = 0;
     this.buttonAdd.addEventListener('click', this.addGoose.bind(this));
 }
 
@@ -112,18 +116,32 @@ function OfferBanner (offer) {
     this.itemImg.style.cssText= 'margin-bottom:' + this.offer.clientHeight + 'px;';
 }
 
-AddToBag.prototype.addGoose = function (e) {
+function DetailItem (items) {
+    if (!items) return;
+
+    this.items = items;
+    this.items.addEventListener('click', this.goToDetailItem.bind(this));
+}
+
+DetailItem.prototype.goToDetailItem = function (e) {
+  var target = e && e.target || e.srcElement;
+
+    var item = target.closest('.arrivalItem').getAttribute('data-product');
+    if (!item) return;
+    document.location.href = 'item' + item + '.html';
+    return item;
+};
+
+Bag.prototype.addGoose = function (e) {
+    e.preventDefault();
     if (document.querySelectorAll('.activeOption').length === document.querySelectorAll('.listOptions').length) {
         document.querySelector('.chooseOptions').classList.remove('display');
 
-        var price = document.querySelector('.priceItem').innerText.split('£')[1];
-
-        this.commonPrice += +price;
-        localStorage.commonPrice = +this.commonPrice + +this.storage()[0];
-        localStorage.countItems = +this.count+ +this.storage()[1];
-        this.count++;
+        this.commonPrice = document.querySelector('.priceItem').innerText.split('£')[1];
+        localStorage.commonPrice = (+this.commonPrice) + (+this.storage()[0]);
+        localStorage.countItems = (+this.count) + (+this.storage()[1]);
         document.querySelector('.commonPrice').innerHTML = '£' + localStorage.commonPrice + '<span class="countItems">('+ localStorage.countItems  +')</span>';
-
+        this.cart(e);
 
     } else {
         document.querySelector('.chooseOptions').classList.add('display');
@@ -131,8 +149,35 @@ AddToBag.prototype.addGoose = function (e) {
 
 };
 
+Bag.prototype.cart = function (e) {
+    this.objCount = 0;
+    var cart =  (localStorage.cart) ? JSON.parse(localStorage.cart) : {},
+        productName = document.querySelector('.nameProduct').innerText,
+        productPrice = document.querySelector('.priceItem').innerText,
+        productSize = document.querySelector('.sizeOptions').querySelector('.activeOption').innerText,
+        productColor = document.querySelector('.colorOptions').querySelector('.activeOption').innerText;
+
+    for (var key in cart) {
+        this.objCount++;
+    }
+    this.id = (localStorage.cart) ? this.objCount : this.id;
+    console.log(cart);
+    cart[this.id] = {
+        product: productName,
+        price: productPrice,
+        size: productSize,
+        color: productColor,
+        id: this.id
+    };
+
+    var obj = JSON.stringify(cart);
+    localStorage.cart = obj;
+    console.log(obj);
+
+};
+
 Thumbnail.prototype.doFullImg = function (e) {
-  var target = e && e.target || e.srcElement;
+    var target = e && e.target || e.srcElement;
 
     if (!target.parentNode.querySelector('img')) return;
     this.fullImg.src = target.parentNode.querySelector('img').src;
@@ -155,7 +200,7 @@ ProductOptions.prototype.addClassToOption = function (e) {
     var target = e && e.target || e.srcElement;
     var listOption = target.parentNode;
 
-    if (listOption.getAttribute('data-option') === null) return;
+    if (target.tagName != 'LI') return;
     for (var i = 0; i < listOption.children.length; i++) {
         listOption.children[i].classList.remove('activeOption');
     }
