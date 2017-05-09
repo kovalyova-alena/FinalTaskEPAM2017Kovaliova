@@ -860,15 +860,23 @@ header .openSearch {
     left: 0;
 }
 
-.chooseOptions {
+.chooseOptions,
+.addedGoose{
     display: none;
+    text-align: center;
 }
 
-.chooseOptions.display {
+.addedGoose {
+    margin-top: 3%;
+}
+
+.chooseOptions.display,
+.addedGoose.display {
     display: block;
 }
 
-.messageAboutChoice {
+.messageAboutChoice,
+a.messageAboutChoice {
     font: 16px/34px 'FuturaDemi';
     text-align: center;
     color: #f14a58;
@@ -939,11 +947,14 @@ header .openSearch {
 
 .shoppingBlock {
     width: 50%;
+    float: left;
+    margin-top: 2%;
 }
 
 .shopImg {
     width: 45%;
     float: left;
+    padding-right: 20px;
 }
 
 .shopOptions {
@@ -972,6 +983,52 @@ header .openSearch {
     font: 14px/65px 'Helvetica Neue';
     text-align: center;
 }
+
+.infoBag {
+    font: 12px/40px 'FuturaDemi';
+    background: #f7f7f7;
+    text-align: center;
+    margin-top: 5%;
+    border-top: 1px solid #e5e5e5;
+}
+
+.shoppingBag .arrivalButton {
+    margin-top: 0%;
+}
+
+.emptyBag {
+  font: 13px/65px 'RobotoBold';
+    text-align: center;
+}
+
+.clearBag {
+    padding-left: 3%;
+}
+
+.totalTitle {
+    font: 12px 'HelveticaNeueRegular';
+}
+
+.totalCost {
+    font: 18px 'FuturaDemi';
+}
+
+.rowBuy {
+    margin-top: 3%;
+}
+
+.totalBlock {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.thanks, .empty {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    text-align: center;
+    font: 30px/65px 'FuturaDemi';
+}
+
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 @media (min-width: 1025px) {
 

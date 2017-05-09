@@ -21,9 +21,11 @@ App.prototype.init = function () {
     if (localStorage && sessionStorage) {
        this.storage();
     }
+    new Shop(document.querySelector('.shoppingBag'));
 };
 
 App.prototype.storage = function () {
+    this.cart
     this.localStorageCommonPrice = (localStorage.commonPrice) ? localStorage.commonPrice : "";
     this.localStorageCountItems = (localStorage.countItems) ? localStorage.countItems : "";
     document.querySelector('.commonPrice').innerHTML = '£' + this.localStorageCommonPrice + '<span class="countItems">('+ this.localStorageCountItems +')</span>';
@@ -39,6 +41,8 @@ ProductOptions.prototype = Object.create(App.prototype);
 Thumbnail.prototype = Object.create(App.prototype);
 Bag.prototype = Object.create(App.prototype);
 DetailItem.prototype = Object.create(App.prototype);
+Shop.prototype = Object.create(App.prototype);
+
 
 window.addEventListener('resize', function(event){
     new OfferBanner(document.querySelector('.extraOff'));
@@ -68,10 +72,7 @@ function Bag (button) {
     if (!button) return;
 
     this.buttonAdd = button;
-    this.count = 1;
-    this.commonPrice = 0;
-    this.id = 1;
-    this.objCount = 0;
+    this.cart =  (localStorage.cart) ? JSON.parse(localStorage.cart) : {};
     this.buttonAdd.addEventListener('click', this.addGoose.bind(this));
 }
 
@@ -123,6 +124,106 @@ function DetailItem (items) {
     this.items.addEventListener('click', this.goToDetailItem.bind(this));
 }
 
+function Shop (shop) {
+    if (!shop) return;
+
+    this.shop = shop;
+    this.buttonBuy = document.querySelector('.buyNow');
+    this.totalCost = document.querySelector('.totalCost');
+    this.emptyBag = document.querySelector('.emptyBag');
+    var str  = '';
+    this.cart =  (localStorage.cart) ? JSON.parse(localStorage.cart) : {};
+    this.checkEmpty();
+    this.buttonBuy.addEventListener('click', this.buyGoose.bind(this));
+    this.emptyBag.addEventListener('click', this.clearBag.bind(this, ''));
+    this.totalSum();
+
+    for (var key in this.cart) {
+        str = this.createItem(this.cart[key], key);
+        document.querySelector('.shopItems').insertAdjacentHTML('beforeEnd', str);
+    }
+
+    this.removeButton = document.querySelectorAll('.removeItem');
+
+    for (var i = 0; i < this.removeButton.length; i++) {
+        this.removeButton[i].addEventListener('click', this.removeItem.bind(this));
+    }
+}
+
+Shop.prototype.createItem = function (item, key) {
+    var str = '<div class="shoppingBlock clearfix" data-block="'+ key +'">'+
+        '<div class="shopImg">'+
+        '<img src="' + item.img + '" alt="">'+
+        '<p class="priceBag">' + item.price + '</p>'+
+        '</div>'+
+        '<div class="shopOptions">'+
+        '<p><a href="item1.html" class="productBag">' + item.product + '</a></p>'+
+        '<p class="optionBag">Color: <span class="colorBag">' + item.color + '</span></p>'+
+        '<p class="optionBag">Size: <span class="sizeBag">' + item.size +'</span></p>'+
+        '<p class="optionBag">Quantity: <span class="quantityBag">' + item.qw +'</span></p>'+
+        '<p class="removeItem">Remove Item</p>'+
+        '</div>'+
+        '</div>';
+    return str;
+};
+
+Shop.prototype.buyGoose = function (e) {
+    e.preventDefault();
+    this.clearBag();
+    document.querySelector('.shopItems').innerHTML = '<p class="thanks">Thank you for your purchase</p>';
+};
+
+Shop.prototype.removeItem = function (e) {
+    var target = e && e.target || e.srcElement,
+        item = target.closest('.shoppingBlock'),
+        data = item.getAttribute('data-block'),
+        price = 0,
+        quantityOfGooses = 0;
+
+    item.parentNode.removeChild(item);
+    delete this.cart[data];
+
+    var object = JSON.stringify(this.cart);
+    localStorage.cart = object;
+
+    this.cart =  (localStorage.cart) ? JSON.parse(localStorage.cart) : {};
+    for (var key in this.cart) {
+        quantityOfGooses++;
+        price += +this.cart[key].price.split('£')[1]*this.cart[key].qw;
+    }
+
+    localStorage.countItems = quantityOfGooses;
+    localStorage.commonPrice = price;
+    document.querySelector('.commonPrice').innerHTML = '£' + localStorage.commonPrice + '<span class="countItems">('+ localStorage.countItems  +')</span>';
+    this.checkEmpty();
+    this.totalSum();
+
+};
+
+Shop.prototype.clearBag = function (param, e) {
+    e.preventDefault();
+    localStorage.clear();
+    document.querySelector('.commonPrice').innerHTML = '';
+    if (param == '') {
+        this.emptyInfo();
+        this.totalSum();
+    }
+};
+
+Shop.prototype.emptyInfo = function () {
+    document.querySelector('.shopItems').innerHTML = '<p class="empty">Your shopping bag is empty. Use Catalog to add new items</p>';
+};
+
+Shop.prototype.checkEmpty = function () {
+    if (localStorage.cart == '{}') {
+        this.emptyInfo();
+    }
+};
+Shop.prototype.totalSum = function () {
+    this.totalCost.innerHTML = localStorage.commonPrice ? ('£ ' + localStorage.commonPrice) : '£ 0';
+};
+
+
 DetailItem.prototype.goToDetailItem = function (e) {
   var target = e && e.target || e.srcElement;
 
@@ -134,46 +235,57 @@ DetailItem.prototype.goToDetailItem = function (e) {
 
 Bag.prototype.addGoose = function (e) {
     e.preventDefault();
+    var quantityOfGooses = 0;
+    var price = 0;
+
     if (document.querySelectorAll('.activeOption').length === document.querySelectorAll('.listOptions').length) {
         document.querySelector('.chooseOptions').classList.remove('display');
+        document.querySelector('.addedGoose').classList.remove('display');
+        this.addCart(e);
 
-        this.commonPrice = document.querySelector('.priceItem').innerText.split('£')[1];
-        localStorage.commonPrice = (+this.commonPrice) + (+this.storage()[0]);
-        localStorage.countItems = (+this.count) + (+this.storage()[1]);
+
+        for (var key in this.cart) {
+            quantityOfGooses++;
+            price += +this.cart[key].price.split('£')[1]*this.cart[key].qw;
+        }
+
+        localStorage.countItems = quantityOfGooses;
+        localStorage.commonPrice = price;
         document.querySelector('.commonPrice').innerHTML = '£' + localStorage.commonPrice + '<span class="countItems">('+ localStorage.countItems  +')</span>';
-        this.cart(e);
-
+        document.querySelector('.addedGoose').classList.add('display');
+        
     } else {
         document.querySelector('.chooseOptions').classList.add('display');
     }
 
 };
 
-Bag.prototype.cart = function (e) {
-    this.objCount = 0;
-    var cart =  (localStorage.cart) ? JSON.parse(localStorage.cart) : {},
-        productName = document.querySelector('.nameProduct').innerText,
+Bag.prototype.addCart = function (e) {
+    var productName = document.querySelector('.nameProduct').innerText,
         productPrice = document.querySelector('.priceItem').innerText,
         productSize = document.querySelector('.sizeOptions').querySelector('.activeOption').innerText,
-        productColor = document.querySelector('.colorOptions').querySelector('.activeOption').innerText;
+        productColor = document.querySelector('.colorOptions').querySelector('.activeOption').innerText,
+        id = document.querySelector('.nameProduct').getAttribute('data-nameProduct'),
+        imgProduct = document.querySelector('.fullItem').querySelector('img').getAttribute('src'),
+        uniqId = id + "-"+productColor + ' '+ productSize;
+        uniqId = uniqId.replace(/\s/g, '-');
 
-    for (var key in cart) {
-        this.objCount++;
+    if (this.cart[uniqId]) {
+        this.cart[uniqId].qw += 1;
+    } else {
+        this.cart[uniqId] = {
+            product: productName,
+            price: productPrice,
+            size: productSize,
+            color: productColor,
+            id: id,
+            img: imgProduct,
+            qw: 1
+        };
     }
-    this.id = (localStorage.cart) ? this.objCount : this.id;
-    console.log(cart);
-    cart[this.id] = {
-        product: productName,
-        price: productPrice,
-        size: productSize,
-        color: productColor,
-        id: this.id
-    };
 
-    var obj = JSON.stringify(cart);
+    var obj = JSON.stringify(this.cart);
     localStorage.cart = obj;
-    console.log(obj);
-
 };
 
 Thumbnail.prototype.doFullImg = function (e) {
