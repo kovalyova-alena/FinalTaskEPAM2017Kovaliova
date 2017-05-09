@@ -1028,10 +1028,8 @@ a.messageAboutChoice {
     text-align: center;
     font: 30px/65px 'FuturaDemi';
 }
-
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 @media (min-width: 1025px) {
-
     .arrivalItem {
         margin-right: 70px;
     }

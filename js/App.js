@@ -1,0 +1,50 @@
+/**
+ * Created by Alena on 09.05.2017.
+ */
+"use strict";
+
+function App() {
+    this.init();
+}
+
+document.addEventListener('DOMContentLoaded',function() {
+    new App();
+});
+
+App.prototype.init = function () {
+    new Search();
+    new Menu();
+    new OfferBanner(document.querySelector('.extraOff'));
+    new Filter(document.querySelector('.formFilter'));
+    new ProductOptions(document.querySelector('.listOptions'));
+    new Thumbnail(document.querySelector('.tumbs'));
+    new Bag(document.querySelector('.addToBag'));
+    new GoToItem(document.querySelector('.rowArrivals'));
+    if (localStorage && sessionStorage) {
+        this.storage();
+    }
+    new Shop(document.querySelector('.shoppingBag'));
+};
+
+App.prototype.storage = function () {
+    this.localStorageCommonPrice = (localStorage.commonPrice) ? localStorage.commonPrice : "";
+    this.localStorageCountItems = (localStorage.countItems) ? localStorage.countItems : "";
+    document.querySelector('.commonPrice').innerHTML = '£' + this.localStorageCommonPrice + '<span class="countItems">('+ this.localStorageCountItems +')</span>';
+    var storageArr = [this.localStorageCommonPrice, this.localStorageCountItems];
+    return storageArr;
+};
+
+Search.prototype = Object.create(App.prototype);
+Menu.prototype = Object.create(App.prototype);
+OfferBanner.prototype = Object.create(App.prototype);
+Filter.prototype = Object.create(App.prototype);
+ProductOptions.prototype = Object.create(App.prototype);
+Thumbnail.prototype = Object.create(App.prototype);
+Bag.prototype = Object.create(App.prototype);
+GoToItem.prototype = Object.create(App.prototype);
+Shop.prototype = Object.create(App.prototype);
+
+
+window.addEventListener('resize', function(event){
+    new OfferBanner(document.querySelector('.extraOff'));
+});

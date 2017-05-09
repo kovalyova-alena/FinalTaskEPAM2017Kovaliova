@@ -1,0 +1,37 @@
+{
+  "name": "final",
+  "version": "1.0.0",
+  "description": "epam",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kovalyova-alena/FinalTaskEPAM2017Kovaliova.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kovalyova-alena/FinalTaskEPAM2017Kovaliova/issues"
+  },
+  "homepage": "https://github.com/kovalyova-alena/FinalTaskEPAM2017Kovaliova#readme",
+  "dependencies": {
+    "concat": "^1.0.3",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-html-prettify": "0.0.1",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-rename": "^1.2.2",
+    "gulp-sequence": "^0.4.6",
+    "gulp-uglify": "^2.1.2",
+    "gulp-watch": "^4.3.10",
+    "imagemin-pngquant": "^5.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
