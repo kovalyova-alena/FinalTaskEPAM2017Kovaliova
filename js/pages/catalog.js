@@ -26,6 +26,14 @@ function OfferBanner (offer) {
 }
 
 
+function GoToItem (items) {
+    if (!items) return;
+
+    this.items = items;
+    this.items.addEventListener('click', this.goToDetailItem.bind(this));
+}
+
+
 Filter.prototype.openFilter = function () {
     this.desktopSelects.classList.toggle('mobileSelects');
 };
@@ -98,3 +106,14 @@ Filter.prototype.mobileSelectedOptions = function () {
         this.filterTablet.innerHTML +=  this.selectItems[j].querySelector('select').children[0].innerHTML + ',';
     }
 };
+
+
+GoToItem.prototype.goToDetailItem = function (e) {
+    var target = e && e.target || e.srcElement;
+
+    var item = target.closest('.arrivalItem').getAttribute('data-product');
+    if (!item) return;
+    document.location.href = 'item' + item + '.html';
+    return item;
+};
+

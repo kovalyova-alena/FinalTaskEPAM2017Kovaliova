@@ -23,7 +23,7 @@ App.prototype.init = function () {
         this.storage();
     }
     new Shop(document.querySelector('.shoppingBag'));
-    new Slider(document.querySelector('.slider'), true, 5000);
+    new Slider(document.querySelector('.slider'), false, 5000);
 };
 
 App.prototype.storage = function () {
@@ -60,5 +60,5 @@ Slider.prototype = Object.create(App.prototype);
 
 window.addEventListener('resize', function(event){
     new OfferBanner(document.querySelector('.extraOff'));
-    new Slider(document.querySelector('.slider'));
+    new Slider(document.querySelector('.slider'), false);
 });

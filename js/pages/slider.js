@@ -24,11 +24,12 @@ function Slider (slider, auto, sec) {
 
 Slider.prototype.generatePoints = function(number) {
 	var	str = "";
-		
+
 	for (var i = 1; i <= number; i++) {
 		str +=  '<span data-controls="' + i + '"> </span>';
-	}	
+	}
 
+	this.controls.innerHTML = '';
 	this.controls.insertAdjacentHTML('afterBegin', str);
 	var active = this.controls.firstElementChild.classList.add('activeSlide');
 };
@@ -56,11 +57,13 @@ Slider.prototype.nextSlide = function (seconds) {
 
 Slider.prototype.moveSlides = function (activeCurrent) {
 	var ul = document.querySelector('.sliderList'),
-		active = document.querySelector('.activeSlide');
+		active = document.querySelector('.activeSlide'),
+		ulWidth = this.ul.firstElementChild.clientWidth*this.items.length;
 
 	active.classList.remove('activeSlide');
 	activeCurrent.classList.add('activeSlide');
-	ul.style.cssText = "transform: translateX(-" + (this.sliderWidth-1)*(this.currentSlide) +"px); transition: 0.5s; width:" + this.ulWidth + "px";
+	
+	ul.style.cssText = "transform: translateX(-" + (this.sliderWidth-1)*(this.currentSlide) +"px); transition: 0.5s; width:" + ulWidth + "px";
 };
 
 Slider.prototype.clearInterval = function () {

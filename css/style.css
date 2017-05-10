@@ -247,6 +247,8 @@ button:focus {
     font: 30px/65px 'FuturaHeavy', sans-serif;
     color: inherit;
     text-decoration: none;
+    letter-spacing: 0.8px;
+
 }
 
 .logo:hover {
@@ -273,7 +275,7 @@ button:focus {
 }
 
 .bag {
-    margin-left: 50px;
+    margin-left: 33px;
 }
 
 .logoMobile {
@@ -482,7 +484,7 @@ header .openSearch {
 .overlay {
     position: absolute;
     top: 55px;
-    right: 10%;
+    right: 16%;
     text-align: center;
 }
 
@@ -502,7 +504,7 @@ header .openSearch {
     color: #000;
     padding-left: 0;
     padding-right: 0;
-    margin-top: 70px;
+    margin-top: 90px;
     width: 240px;
     text-align: center;
     position: relative;
@@ -510,9 +512,11 @@ header .openSearch {
 
 .arrivalButton {
     text-align: center;
-    margin-top: 7%;
-    margin-bottom: 9%;
+    margin-top: 8%;
+    margin-bottom: 5%;
 }
+
+
 
 /* ================= END SECTION NEW ARRIVALS  =============*/
 
@@ -526,7 +530,7 @@ header .openSearch {
 .leftFooter {
     border-right: 1px solid #e5e5e5;
     padding-top: 2.5%;
-    padding-bottom: 7.5%;
+    padding-bottom: 8.5%;
 }
 
 .rightFooter {
@@ -543,7 +547,7 @@ header .openSearch {
 .rowRightFooter .customMiniHead {
     line-height: 42px;
     margin-bottom: 0;
-    margin-top: 10px;
+    margin-top: 15px;
 }
 .footerList li a {
     font: 14px/40px 'HelveticaNeueRegular';
@@ -556,7 +560,6 @@ header .openSearch {
 
 .footerCustom a {
     font-family: 'HelveticaNeueBold';
-
 }
 
 .phone:hover {
@@ -595,6 +598,14 @@ header .openSearch {
 
 .tw {
     margin-left: 22px;
+}
+
+.footerList {
+    margin-top: 15px;
+}
+
+.footerPhone {
+    padding-left: 35px;
 }
 /* ================= END FOOTER  =============*/
 /* ================= BOTTOM BAR  =============*/
