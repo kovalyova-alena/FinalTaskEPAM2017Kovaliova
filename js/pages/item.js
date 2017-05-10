@@ -58,7 +58,7 @@ Bag.prototype.addGoose = function (e) {
 
         localStorage.countItems = quantityOfGooses;
         localStorage.commonPrice = price;
-        document.querySelector('.commonPrice').innerHTML = '£' + localStorage.commonPrice + '<span class="countItems">('+ localStorage.countItems  +')</span>';
+        document.querySelector('.commonPrice').innerHTML = '£ ' + localStorage.commonPrice + '<span class="countItems"> ('+ localStorage.countItems  +')</span>';
         document.querySelector('.addedGoose').classList.add('display');
     } else {
         document.querySelector('.chooseOptions').classList.add('display');

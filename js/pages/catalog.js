@@ -70,16 +70,17 @@ Filter.prototype.closeSelect = function (e) {
 
     target.closest('select').classList.remove('display');
 
-    var selected = (target.options.selectedIndex);
+    target = (target.tagName == 'SELECT') ? target(target.options.selectedIndex) : target;
     var optionVal = (target.value === 'notSelected') ?
         this.filterStyles('remove', '', target) :
-        this.filterStyles('add', target(selected).innerText, target(selected));
+        this.filterStyles('add', target.innerText, target);
 
     return optionVal;
 
 };
 
 Filter.prototype.filterStyles = function (method, value, option) {
+    console.log(value ,option);
     var firstItem = document.querySelector('.desktopSelects').firstElementChild;
     var lastItem = document.querySelector('.desktopSelects').lastElementChild;
 

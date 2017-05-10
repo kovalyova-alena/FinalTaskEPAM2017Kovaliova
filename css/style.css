@@ -664,8 +664,12 @@ header .openSearch {
     display: block;
     cursor: pointer;
     z-index: 10;
-    padding-left: 15px;
+    padding-left: 22px;
     position: relative;
+}
+
+.filter .selectItem:first-child .selectLabel {
+    padding-left: 0;
 }
 
 .filter select {
@@ -749,9 +753,14 @@ header .openSearch {
 .selectItem:after {
     content: url('../img/catalog/arrowSelect.png');
     position: absolute;
-    right: 30px;
-    top: 25px;
+    right: 17px;
+    top: 22px;
 }
+
+.selectItem:last-child:after {
+    right: 0;
+}
+
 
 .mobileSelects {
     background: #fff;
@@ -783,6 +792,10 @@ header .openSearch {
 
 .products .customItalic {
     line-height: 24px;
+}
+
+.products .arrivalItem {
+    margin-top: 58px;
 }
 
 .viewCover {
@@ -891,7 +904,7 @@ header .openSearch {
 .bannersCatalog .rightBannerSmall .overlay{
     position: absolute;
     width: 100%;
-    bottom: 30px;
+    bottom: 48px;
     right: inherit;
     top:inherit;
     text-align: center;
@@ -916,24 +929,31 @@ header .openSearch {
     border-top: 1px solid #e5e5e5;
 }
 .backToCatalog {
-    font: 16px/65px 'FuturaDemi';
+    font: 16px/55px 'OpenSansBold';
+    margin-left: 16px
 }
 
 .fullItem {
     width: 78%;
+    padding-left: 0;
 }
 
 .fullItem img {
     width: 100%;
 }
 
+.itemProduct {
+    margin-top: 68px;
+}
+
 .tumbs {
     width: 22%;
+    padding-right: 0;
 }
 
 .tumb {
     position: relative;
-    margin-bottom: 15px;
+    margin-bottom: 21px;
     cursor: pointer;
 }
 
@@ -972,15 +992,16 @@ a.messageAboutChoice {
 .rowInfoProduct {
     text-align: center;
     clear: both;
-    margin-top: 25px;
+    margin-top: 52px;
+    letter-spacing: 0.8px;
 }
 
 .nameProduct {
-    font: 26px 'RobotoBold';
+    font: 26px/48px 'RobotoBold';
 }
 
 .priceItem {
-    font: 18px/45px 'RobotoRegular';
+    font: 18px/49px 'RobotoRegular';
 }
 
 .descProduct {
@@ -1004,10 +1025,10 @@ a.messageAboutChoice {
     cursor: pointer;
     display: inline;
     width: 145px;
-    margin-right: 60px;
+    margin-right: 52px;
     padding: 20px 40px;
     border: 1px solid #e5e5e5;
-    font: 24px/65px 'OpenSansSemiBold';
+    font: 24px/64px 'OpenSansSemiBold';
 }
 
 .listOptions li:hover {
@@ -1017,20 +1038,40 @@ a.messageAboutChoice {
     margin-right: 0;
 }
 
+.colorOptions li {
+    margin-right: 62px;
+}
+
 .activeOption {
     background: #707070;
 }
 
 .color {
-    margin-top: 40px;
+    margin-top: 54px;
+}
+
+.addToBag {
+    margin-top: 13%;
+    margin-bottom: 12.8%;
+}
+
+.bannersCatalog .overlay {
+    right: 13%;
 }
 
 .bagTitle {
     border-top: 1px solid #e5e5e5;
 }
-.titleShoppingBag {
-    font: 24px/65px 'FuturaDemi';
+
+.bagTitle, .breadCrumbs {
+    border-bottom: 1px solid #e5e5e5;
 }
+.titleShoppingBag {
+    font: 24px/60px OpenSansBold;
+    margin-left: 30px;
+}
+
+/* ++++++++++++++++++SHOP +++++++++++++++++++++++++++*/
 
 .shoppingBlock {
     width: 50%;
@@ -1048,6 +1089,11 @@ a.messageAboutChoice {
     width: 55%;
     float: left;
 
+}
+
+.titleProduct {
+    margin-top: 14px;
+    margin-bottom: 10px;
 }
 
 .productBag {
@@ -1074,13 +1120,13 @@ a.messageAboutChoice {
 .infoBag {
     font: 12px/40px 'FuturaDemi';
     background: #f7f7f7;
-    text-align: center;
+    padding-left: 18%;
     margin-top: 5%;
     border-top: 1px solid #e5e5e5;
 }
 
 .shoppingBag .arrivalButton {
-    margin-top: 0%;
+    margin-top: 0;
 }
 
 .emptyBag {
@@ -1089,8 +1135,12 @@ a.messageAboutChoice {
 }
 
 .clearBag {
-    padding-left: 3%;
+    padding-left: 2.5%;
     width: 25%;
+}
+
+.buyNow {
+    padding: 20px 120px;
 }
 
 .totalTitle {
@@ -1107,12 +1157,14 @@ a.messageAboutChoice {
 
 .rowBuy .arrivalButton {
     width: 50%;
+    margin-bottom: 5.5%;
 }
 
 .totalBlock {
     text-align: right;
-    margin-top: 15px;
+    margin-top: 19px;
     width: 25%;
+    padding-right: 30px;
 }
 
 .thanks, .empty {
@@ -1137,7 +1189,7 @@ a.messageAboutChoice {
     }
 
     .nameFilter {
-        font: 18px/65px 'FuturaDemi';
+        font: 18px/60px 'FuturaDemi';
         color: inherit;
     }
 
@@ -1150,6 +1202,7 @@ a.messageAboutChoice {
         color: #f14a58;
         margin-top: -10px;
     }
+
 }
 
 @media (min-width: 1025px) and (max-width: 1199px) {

@@ -32,7 +32,7 @@ Shop.prototype.createItem = function (item, key) {
         '<p class="priceBag">' + item.price + '</p>'+
         '</div>'+
         '<div class="shopOptions">'+
-        '<p><a href="item1.html" class="productBag">' + item.product + '</a></p>'+
+        '<p class="titleProduct"><a href="item1.html" class="productBag">' + item.product + '</a></p>'+
         '<p class="optionBag">Color: <span class="colorBag">' + item.color + '</span></p>'+
         '<p class="optionBag">Size: <span class="sizeBag">' + item.size +'</span></p>'+
         '<p class="optionBag">Quantity: <span class="quantityBag">' + item.qw +'</span></p>'+
