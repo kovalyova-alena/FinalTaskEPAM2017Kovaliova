@@ -210,10 +210,23 @@ a:hover {
 input, select, textarea {
 }
 
-::-webkit-input-placeholder {color:#a8a8a8;font: 12px/65px 'FuturaDemi'; letter-spacing: 0.3px;}
-:-moz-placeholder          {color:#a8a8a8;font: 12px/65px 'FuturaDemi';letter-spacing: 0.3px;}
 
-:-ms-input-placeholder      {color:#a8a8a8;font: 12px/65px 'FuturaDemi';letter-spacing: 0.3px;}
+.search::-webkit-input-placeholder {
+    color:#a8a8a8;font: 12px/65px 'FuturaDemi' !important;letter-spacing: 0.3px;
+}
+
+.search:-moz-placeholder {
+    color:#a8a8a8;font: 12px/65px 'FuturaDemi' !important;letter-spacing: 0.3px;
+}
+
+.search::-moz-p {
+    color:#a8a8a8;font: 12px/65px 'FuturaDemi' !important;letter-spacing: 0.3px;
+}
+
+.search:-ms-input-placeholder {
+    color:#a8a8a8;font: 12px/65px 'FuturaDemi' !important;letter-spacing: 0.3px;
+}
+
 
 button:focus {
     outline: none;
@@ -297,6 +310,7 @@ button:focus {
 }
 .searchForm {
     position: relative;
+    margin-top: 5px;
 }
 
 .searchForm:after {
@@ -304,7 +318,7 @@ button:focus {
     background: #e5e5e5;
     height: 2px;
     position: absolute;
-    bottom: -5px;
+    bottom: -8px;
     left: 0;
     width: 100%;
 }
@@ -314,7 +328,7 @@ button:focus {
     border: none;
     box-shadow: none;
     color: #a8a8a8;
-    font: 12px/26px 'FuturaDemi';
+    font: 12px 'FuturaDemi';
 }
 
 .search input:focus {
@@ -1254,9 +1268,6 @@ a.messageAboutChoice {
         font-size: 26px;
     }
 
-    .rightBannerSmall {
-        border-left: 1px solid #e5e5e5;
-    }
 
     .banners {
         border-bottom: 1px solid #e5e5e5;
@@ -1365,6 +1376,10 @@ a.messageAboutChoice {
         text-align: center;
     }
 
+    .leftBanner {
+        border-right: 1px solid #e5e5e5;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -1403,6 +1418,10 @@ a.messageAboutChoice {
         padding-left: 3%;
         padding-right: 3%;
         line-height: 24px;
+    }
+
+    .rightBannerSmall {
+        border-left: 1px solid #e5e5e5;
     }
 
 
@@ -1509,6 +1528,10 @@ a.messageAboutChoice {
 
     .quickView, .morePhotos {
         line-height: 26px;
+    }
+
+    .rowRightFooter:after, .leftFooter:after {
+        margin-left: -20px;
     }
 
 }
@@ -1670,7 +1693,7 @@ a.messageAboutChoice {
         background: #e5e5e5;
         height: 1px;
         width: 100vw;
-        margin-left: -20px;
+        margin-left: -40px;
         position: relative;
         left: 0;
         bottom: -20px;

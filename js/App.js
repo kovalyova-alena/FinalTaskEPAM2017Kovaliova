@@ -19,7 +19,6 @@ App.prototype.init = function () {
     new Thumbnail(document.querySelector('.tumbs'));
     new Bag(document.querySelector('.addToBag'));
     new GoToItem(document.querySelector('.rowArrivals'));
-
     if (window.localStorage && window.sessionStorage) {
         this.storage();
     }
