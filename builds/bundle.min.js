@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded',function() {
 });
 
 App.prototype.init = function () {
+    this.polyfillClosest();
     new Search();
     new Menu();
     new OfferBanner(document.querySelector('.extraOff'));
@@ -18,6 +19,7 @@ App.prototype.init = function () {
     new Thumbnail(document.querySelector('.tumbs'));
     new Bag(document.querySelector('.addToBag'));
     new GoToItem(document.querySelector('.rowArrivals'));
+
     if (window.localStorage && window.sessionStorage) {
         this.storage();
     }
@@ -34,6 +36,19 @@ App.prototype.storage = function () {
     document.querySelector('.commonPrice').innerHTML = '£' + this.localStorageCommonPrice + '<span class="countItems">('+ this.localStorageCountItems +')</span>';
     var storageArr = [this.localStorageCommonPrice, this.localStorageCountItems];
     return storageArr;
+};
+
+App.prototype.polyfillClosest = function () {
+    if (!Element.prototype.matches) Element.prototype.matches = Element.prototype.msMatchesSelector;
+    if (!Element.prototype.closest) Element.prototype.closest = function (selector) {
+        var el = this;
+        while (el) {
+            if (el.matches(selector)) {
+                return el;
+            }
+            el = el.parentElement;
+        }
+    };
 };
 
 Search.prototype = Object.create(App.prototype);
