@@ -22,9 +22,6 @@ App.prototype.init = function () {
     if (window.localStorage && window.sessionStorage) {
         this.storage();
     }
-
-
-    
     new Shop(document.querySelector('.shoppingBag'));
     new Slider(document.querySelector('.slider'), true, 5000);
 };
