@@ -23,7 +23,7 @@ gulp.task('image', function () {
 gulp.task('js', function () {
     return gulp.src(['./js/App.js', './js/pages/*.js'])
         .pipe(concat('bundle.min.js'))
-        //.pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('./builds/'));
 });
 
