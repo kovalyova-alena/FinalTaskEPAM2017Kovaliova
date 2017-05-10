@@ -1,6 +1,4 @@
-/**
- * Created by Alena on 09.05.2017.
- */
+
 "use strict";
 
 function App() {
@@ -24,6 +22,7 @@ App.prototype.init = function () {
         this.storage();
     }
     new Shop(document.querySelector('.shoppingBag'));
+    new Slider(document.querySelector('.slider'), true, 5000);
 };
 
 App.prototype.storage = function () {
@@ -43,7 +42,7 @@ Thumbnail.prototype = Object.create(App.prototype);
 Bag.prototype = Object.create(App.prototype);
 GoToItem.prototype = Object.create(App.prototype);
 Shop.prototype = Object.create(App.prototype);
-
+Slider.prototype = Object.create(App.prototype);
 
 window.addEventListener('resize', function(event){
     new OfferBanner(document.querySelector('.extraOff'));

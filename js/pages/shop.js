@@ -8,6 +8,7 @@ function Shop (shop) {
     this.emptyBag = document.querySelector('.emptyBag');
     this.cart =  (localStorage.cart) ? JSON.parse(localStorage.cart) : {};
     this.checkEmpty();
+    var str = '';
     this.buttonBuy.addEventListener('click', this.buyGoose.bind(this));
     this.emptyBag.addEventListener('click', this.clearBag.bind(this, ''));
     this.totalSum();
@@ -99,4 +100,3 @@ Shop.prototype.checkEmpty = function () {
 Shop.prototype.totalSum = function () {
     this.totalCost.innerHTML = localStorage.commonPrice ? ('£ ' + localStorage.commonPrice) : '£ 0';
 };
-

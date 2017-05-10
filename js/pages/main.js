@@ -38,19 +38,3 @@ GoToItem.prototype.goToDetailItem = function (e) {
     document.location.href = 'item' + item + '.html';
     return item;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

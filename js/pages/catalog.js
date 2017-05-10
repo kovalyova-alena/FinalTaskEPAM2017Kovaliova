@@ -94,4 +94,3 @@ Filter.prototype.mobileSelectedOptions = function () {
         this.filterTablet.innerHTML +=  this.selectItems[j].querySelector('select').children[0].innerHTML + ',';
     }
 };
-
