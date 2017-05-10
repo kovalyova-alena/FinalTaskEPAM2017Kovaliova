@@ -18,9 +18,12 @@ App.prototype.init = function () {
     new Thumbnail(document.querySelector('.tumbs'));
     new Bag(document.querySelector('.addToBag'));
     new GoToItem(document.querySelector('.rowArrivals'));
-    if (localStorage && sessionStorage) {
+    if (window.localStorage && window.sessionStorage) {
         this.storage();
     }
+
+
+    
     new Shop(document.querySelector('.shoppingBag'));
     new Slider(document.querySelector('.slider'), true, 5000);
 };

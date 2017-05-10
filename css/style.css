@@ -211,7 +211,7 @@ input, select, textarea {
 }
 
 ::-webkit-input-placeholder {color:#a8a8a8;font: 12px/65px 'FuturaDemi'; letter-spacing: 0.3px;}
-::-moz-placeholder          {color:#a8a8a8;font: 12px/65px 'FuturaDemi';letter-spacing: 0.3px;}
+:-moz-placeholder          {color:#a8a8a8;font: 12px/65px 'FuturaDemi';letter-spacing: 0.3px;}
 
 :-ms-input-placeholder      {color:#a8a8a8;font: 12px/65px 'FuturaDemi';letter-spacing: 0.3px;}
 
@@ -370,7 +370,7 @@ header .openSearch {
     border-bottom: 1px solid #e5e5e5;
     display: block;
     width: 100vw;
-    margin-left: -40px;
+    margin-left: -21px;
 }
 
 
@@ -484,7 +484,7 @@ header .openSearch {
     color: #000;
     padding-left: 0;
     padding-right: 0;
-    margin-top: 7%;
+    margin-top: 70px;
     width: 240px;
     text-align: center;
     position: relative;
@@ -531,13 +531,19 @@ header .openSearch {
     font: 14px/40px 'HelveticaNeueRegular';
 }
 
-.footerCustom span {
-    font-family: 'HelveticaNeueBold';
-}
-
 .footerCustom {
     font: 14px/24px 'HelveticaNeueRegular';
 }
+
+
+.footerCustom a {
+    font-family: 'HelveticaNeueBold';
+
+}
+
+.phone:hover {
+    color: #000;
+ }
 
 .footerQuestions,
 .footerLinks {
@@ -734,6 +740,11 @@ header .openSearch {
 .mobileSelects select option {
     float: left;
     margin-right: 10px;
+    display: inline-block;
+}
+
+.mobileSelects select option:hover {
+    color: inherit;
 }
 
 
@@ -861,6 +872,11 @@ header .openSearch {
     color: #f14a58;
 }
 
+.leftBanner, .rightBanner {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
@@ -925,7 +941,7 @@ a.messageAboutChoice {
 .rowInfoProduct {
     text-align: center;
     clear: both;
-    margin-top: 2%;
+    margin-top: 25px;
 }
 
 .nameProduct {
@@ -1099,7 +1115,7 @@ a.messageAboutChoice {
     }
 
     .valueFilter {
-        font: 18px'FuturaDemi';
+        font: 18px 'FuturaDemi';
         color: #f14a58;
         margin-top: -10px;
     }
@@ -1238,8 +1254,8 @@ a.messageAboutChoice {
         font-size: 26px;
     }
 
-    .leftBanner {
-        border-right: 1px solid #e5e5e5;
+    .rightBannerSmall {
+        border-left: 1px solid #e5e5e5;
     }
 
     .banners {
@@ -1613,6 +1629,7 @@ a.messageAboutChoice {
     .rowRightFooter,
     .rowSocial{
         padding-left: 0;
+        padding-right: 0;
         position: relative;
     }
 
@@ -1653,7 +1670,7 @@ a.messageAboutChoice {
         background: #e5e5e5;
         height: 1px;
         width: 100vw;
-        margin-left: -40px;
+        margin-left: -20px;
         position: relative;
         left: 0;
         bottom: -20px;
