@@ -60,4 +60,5 @@ Slider.prototype = Object.create(App.prototype);
 
 window.addEventListener('resize', function(event){
     new OfferBanner(document.querySelector('.extraOff'));
+    new Slider(document.querySelector('.slider'));
 });
