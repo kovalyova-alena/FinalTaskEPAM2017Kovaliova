@@ -1,8 +1,8 @@
 # FinalTaskEPAM2017Kovaliova
 ## Final Project FE_Ext_Winter17 EPAM
 
-**Goal: (bold)**
-Create minimalistic e-commerce website.
+**Goal:**
+-Create minimalistic e-commerce website.
 
 **Result:**
 - Static HTML files with responsive layout
@@ -21,12 +21,12 @@ Create minimalistic e-commerce website.
 <https://drive.google.com/open?id=0By39zA0XQvpUT1ZSeWoxTG1raEE>
 
 
-** File structure **
-builds/
-|- all.min.css
-|- bundle.min.js
-css/
-fonts/
+**File structure**
+> builds/
+> > |- all.min.css
+> > |- bundle.min.js
+> css/
+> fonts/
 img/
 js/
 |- pages/
