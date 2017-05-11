@@ -795,7 +795,7 @@ header .openSearch {
 }
 
 .products .arrivalItem {
-    margin-top: 58px;
+    margin-top: 56px;
 }
 
 .viewCover {
@@ -845,9 +845,10 @@ header .openSearch {
     position: absolute;
     width: 100%;
     text-align: center;
-    padding-top: 40px;
+    padding-top: 72px;
     z-index: 1;
     cursor: default;
+    letter-spacing: 0.8px;
 }
 
 .extraOff .customMiniHead {
@@ -865,6 +866,7 @@ header .openSearch {
     color: inherit;
     width: 85%;
     margin: 15px auto 0;
+    letter-spacing: 0;
 }
 
 .wrapperItem {
@@ -919,7 +921,13 @@ header .openSearch {
     padding-right: 0;
 }
 
+.products .customGoose {
+    width: 80%;
+}
 
+.showMore {
+    margin-bottom: 11.5%;
+}
 
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
@@ -1177,7 +1185,7 @@ a.messageAboutChoice {
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 @media (min-width: 1025px) {
     .arrivalItem {
-        margin-right: 70px;
+        margin-right: 73px;
     }
 
     .arrivalItem:nth-child(4n+4) {
@@ -1201,6 +1209,14 @@ a.messageAboutChoice {
         font: 18px 'FuturaDemi';
         color: #f14a58;
         margin-top: -10px;
+    }
+
+    .overlayIndivid {
+        top:69%;
+    }
+
+    .products .arrivalItem:nth-child(n+9) {
+        margin-top: 71px;
     }
 
 }

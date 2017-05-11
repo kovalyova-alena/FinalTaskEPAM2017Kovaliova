@@ -22,7 +22,7 @@ function OfferBanner (offer) {
 
     this.offer = offer;
     this.itemImg = document.querySelectorAll('.arrivalItem')[0];
-    this.itemImg.style.cssText= 'margin-bottom:' + this.offer.clientHeight + 'px;';
+    this.itemImg.style.cssText= 'margin-bottom:' + (this.offer.clientHeight + this.offer.clientHeight/4) + 'px;';
 }
 
 

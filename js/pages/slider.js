@@ -7,7 +7,6 @@ function Slider (slider, auto, sec) {
 	this.controls = document.querySelector('.controls');
 	this.ul = document.querySelector('.sliderList');
 	this.ulWidth = this.ul.firstElementChild.clientWidth*this.items.length;
-	console.log(this.ulWidth);
 	this.ul.style.cssText = 'width:' + this.ulWidth+ 'px';
 	this.generatePoints(this.items.length);
 	this.controls.addEventListener('click', this.moveSliderOnClick.bind(this));
