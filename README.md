@@ -25,6 +25,7 @@
 > builds/
 > > all.min.css
 > > bundle.min.js
+
 > css/
 > fonts/
 > img/
@@ -35,7 +36,9 @@
 > > > main.js
 > > > shop.js
 > > > slider.js
+
 > > App.js
+
 > gulpfile.js
 > package.js
 > catalog.html
