@@ -24,24 +24,37 @@
 **File structure**
 > builds/
 > > all.min.css
+
 > > bundle.min.js
 
 > css/
+
 > fonts/
+
 > img/
+
 > js/
 > > pages/
 > > > catalog.js
+
 > > > item.js
+
 > > > main.js
+
 > > > shop.js
+
 > > > slider.js
 
 > > App.js
 
 > gulpfile.js
+
 > package.js
+
 > catalog.html
+
 > start.html
+
 > item1.html
+
 > shopping_bag.html
