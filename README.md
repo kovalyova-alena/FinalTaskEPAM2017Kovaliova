@@ -1,25 +1,27 @@
 # FinalTaskEPAM2017Kovaliova
-Final Project FE_Ext_Winter17 EPAM
+## Final Project FE_Ext_Winter17 EPAM
 
-Goal:
+**Goal: (bold)**
 Create minimalistic e-commerce website.
 
-Result:
-Static HTML files with responsive layout
-Markup is compatible with list of supported browsers (Chrome Firefox Edge IE11)
-Carousel at the top of Homepage scroll across static images
-Implemented full shopping cart functionality (used LocalStorage)
-Implemented photos switcher
+**Result:**
+- Static HTML files with responsive layout
+- Markup is compatible with list of supported browsers (Chrome Firefox Edge IE11)
+- Carousel at the top of Homepage scroll across static images
+- Implemented full shopping cart functionality (used LocalStorage)
+- Implemented photos switcher
 
-Created Pages:
-Homepage (start)
-Catalog (catalog)
-Item details page (item1)
-Shopping bag (shopping_bag)
+**Created Pages:**
+- Homepage (start)
+- Catalog (catalog)
+- Item details page (item1)
+- Shopping bag (shopping_bag)
 
-Pixel Perfect screenShots
-https://drive.google.com/open?id=0By39zA0XQvpUT1ZSeWoxTG1raEE
+**Pixel Perfect screenShots**
+<https://drive.google.com/open?id=0By39zA0XQvpUT1ZSeWoxTG1raEE>
 
+
+** File structure **
 builds/
 |- all.min.css
 |- bundle.min.js
